@@ -1,0 +1,45 @@
+{{ 'index-banner.css' |  asset_url | stylesheet_tag }}
+
+<section class="color-{{ section.settings.color_scheme }} banner-wrapper">
+    <div class="page-width">
+        <div class="grid grid--2-col grid--1-col-tablet-down banner-content">
+            <div class="grid__item banner-text-content">
+               <h1 class="banner-title color-span">Strengthen Your Foundation with <span>PEBLZ</span></h1> 
+               <p class="banner-description">Our innovative cork pieces offer a unique way to enhance your foot muscles through simple, effective exercises.</p>
+               <div class="btn-row">
+                <a href="" class="custom-site-btn btn-green"><span class="btn-arrow"> {% render 'anchor-arrow' %} </span><span class="btn-text">Learn The Exercises</span></a>
+                <a href="" class="custom-site-btn btn-red"><span class="btn-arrow"> {% render 'anchor-arrow' %} </span><span class="btn-text">get your peblz</span></a>
+               </div>
+               
+            </div>
+            <div class="grid__item banner-image">
+                <img src="https://cdn.shopify.com/s/files/1/0658/9733/2918/files/three-oval-colored-pebbles.png?v=1722843603" alt="">
+                <p class="spin-text"> {% render 'icon-spin' %} Drag to view 360 spin of Pebble</p>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <a href="#.">
+                {% render 'scroll-down' %}
+                 <p>Scroll Down</p>
+            </a>
+        </div>
+    </div>
+</section>
+{% schema %}
+    {
+        "name": "Banner",
+        "settings": [
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "scheme-1"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Banner"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Aldrich';
+    src: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/Aldrich-Regular.woff2') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/Aldrich-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}

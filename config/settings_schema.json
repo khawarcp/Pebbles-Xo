@@ -20,7 +20,7 @@
         "id": "logo_width",
         "min": 50,
         "max": 300,
-        "step": 10,
+        "step": 5,
         "default": 100,
         "unit": "px",
         "label": "t:settings_schema.logo.settings.logo_width.label"
@@ -102,11 +102,46 @@
     ]
   },
   {
+      "name": "Custom Colors",
+      "settings": [
+        {
+          "type": "color",
+          "id": "header_icons",
+          "label": "Header Icons",
+          "default" : "#FF6E3D"
+        },
+        {
+          "type": "color",
+          "id": "homepage_body",
+          "label": "Homepage Body Color",
+          "default" : "#1D1624"
+        },
+        {
+          "type": "color",
+          "id": "green_btn",
+          "label": "Green Anchor",
+          "default" : "#52BD1E"
+        },
+        {
+          "type": "color",
+          "id": "red_btn",
+          "label": "Red Anchor",
+          "default" : "#FF6E3D"
+        }
+      ]
+  },
+  {
     "name": "t:settings_schema.typography.name",
     "settings": [
       {
         "type": "header",
         "content": "t:settings_schema.typography.settings.header__1.content"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_custom_heading",
+        "label": "Use Custom Heading Font",
+        "default": true
       },
       {
         "type": "font_picker",

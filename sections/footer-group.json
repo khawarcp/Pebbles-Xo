@@ -4,9 +4,46 @@
   "sections": {
     "footer": {
       "type": "footer",
+      "blocks": {
+        "link_list_F89amf": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Product",
+            "menu": "footer"
+          }
+        },
+        "link_list_x6U7CM": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Resources",
+            "menu": "resources"
+          }
+        },
+        "link_list_BHXUVh": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Company",
+            "menu": "company"
+          }
+        },
+        "link_list_4gAKbx": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Follow Us",
+            "menu": "follow-us"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_F89amf",
+        "link_list_x6U7CM",
+        "link_list_BHXUVh",
+        "link_list_4gAKbx"
+      ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
+        "color_scheme": "scheme-4",
+        "footer_logo": "shopify:\/\/shop_images\/Pebbles-Xo-Logo.svg",
+        "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,
         "show_social": true,
@@ -15,8 +52,8 @@
         "payment_enable": true,
         "show_policy": true,
         "margin_top": 0,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "padding_top": 80,
+        "padding_bottom": 20
       }
     }
   },

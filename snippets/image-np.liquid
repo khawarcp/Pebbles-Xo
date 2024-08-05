@@ -14,13 +14,13 @@
     <img
     {% if srcset %}
         srcset="
-            {%- if article.image.src.width >= 165 -%}{{ article.image.src | image_url: width: 165 }} 165w,{%- endif -%}
-            {%- if article.image.src.width >= 360 -%}{{ article.image.src | image_url: width: 360 }} 360w,{%- endif -%}
-            {%- if article.image.src.width >= 533 -%}{{ article.image.src | image_url: width: 533 }} 533w,{%- endif -%}
-            {%- if article.image.src.width >= 720 -%}{{ article.image.src | image_url: width: 720 }} 720w,{%- endif -%}
-            {%- if article.image.src.width >= 1000 -%}{{ article.image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
-            {%- if article.image.src.width >= 1500 -%}{{ article.image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
-            {{ article.image.src | image_url }} {{ article.image.src.width }}w
+            {%- if image.src.width >= 165 -%}{{ image.src | image_url: width: 165 }} 165w,{%- endif -%}
+            {%- if image.src.width >= 360 -%}{{ image.src | image_url: width: 360 }} 360w,{%- endif -%}
+            {%- if image.src.width >= 533 -%}{{ image.src | image_url: width: 533 }} 533w,{%- endif -%}
+            {%- if image.src.width >= 720 -%}{{ image.src | image_url: width: 720 }} 720w,{%- endif -%}
+            {%- if image.src.width >= 1000 -%}{{ image.src | image_url: width: 1000 }} 1000w,{%- endif -%}
+            {%- if image.src.width >= 1500 -%}{{ image.src | image_url: width: 1500 }} 1500w,{%- endif -%}
+            {{ image.src | image_url }} {{ image.src.width }}w
         "
         {% endif %}
         {% if sizes %}

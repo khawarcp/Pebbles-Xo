@@ -1,0 +1,86 @@
+h1,h2,h3,h4,h5,h6{
+    letter-spacing: normal;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.home-page-body {
+    background: var(--custom-body-color);
+}
+
+.color-span span{
+    color: var(--header-icons-color)
+}
+
+.header-stick-not-active{
+    padding-top: 1.6rem;
+    background-color: var(--custom-body-color);
+}
+
+
+.btn-row {
+    display: flex;
+    gap: 3.2rem;
+    align-items: center;
+}
+
+.btn-arrow {
+    width: 4.4rem;
+    height: 4.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    border-radius: 50%;
+}
+
+.custom-site-btn {
+    display: flex;
+    align-items: center;
+    text-decoration: none;    
+    text-transform: capitalize;
+}
+
+.btn-text {
+    position: relative;
+    left: -.7rem;
+    background-color: var(--custom-body-color);
+    text-decoration: none;
+}
+
+.btn-green{
+    color: var(--color-green-anchor);
+}
+
+.btn-green .btn-arrow{
+    border: .2rem solid var(--color-green-anchor);
+}
+
+.btn-green .btn-arrow svg path{
+    fill: var(--color-green-anchor);
+}
+
+.btn-red{
+    color: var(--color-red-anchor);
+}
+
+.btn-red .btn-arrow{
+    border: .2rem solid var(--color-red-anchor);
+}
+
+.btn-red .btn-arrow svg path{
+    fill: var(--color-red-anchor);
+}
+
+
+@media screen and (min-width: 1440px) {
+    .page-width {
+        padding: 0 8rem;
+    }
+
+    .header {
+        max-width: 128rem;
+    }
+}

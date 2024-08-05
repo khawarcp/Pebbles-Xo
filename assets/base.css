@@ -100,6 +100,12 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
   padding-right: 3rem;
 }
 
+@media screen and (min-width: 1440px) {
+  .page-width {
+    padding: 0 8rem;
+  }
+}
+
 @media screen and (min-width: 750px) {
   .page-width {
     padding: 0 5rem;
@@ -126,8 +132,8 @@ body:has(.section-header .drawer-menu) .announcement-bar-section .page-width {
 
 @media screen and (min-width: 990px) {
   .header:not(.drawer-menu).page-width {
-    padding-left: 5rem;
-    padding-right: 5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 
   .page-width--narrow {
@@ -295,13 +301,13 @@ h5,
 
 h1,
 .h1 {
-  font-size: calc(var(--font-heading-scale) * 3rem);
+  font-size: calc(var(--font-heading-scale) * 4rem);
 }
 
 @media only screen and (min-width: 750px) {
   h1,
   .h1 {
-    font-size: calc(var(--font-heading-scale) * 4rem);
+    font-size: calc(var(--font-heading-scale) * 5.6rem);
   }
 }
 
@@ -491,7 +497,7 @@ h6:empty {
   text-underline-offset: 0.3rem;
   color: rgb(var(--color-link));
   background-color: transparent;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-family: inherit;
 }
 
@@ -2327,11 +2333,10 @@ input[type='checkbox'] {
 .header-wrapper {
   display: block;
   position: relative;
-  background-color: rgb(var(--color-background));
 }
 
-.header-wrapper--border-bottom {
-  border-bottom: 0.1rem solid rgba(var(--color-foreground), 0.08);
+.header-stick-not-active .header-wrapper {
+  background-color: var(--custom-body-color);
 }
 
 .header {
@@ -2369,7 +2374,7 @@ input[type='checkbox'] {
 
   .header--middle-left {
     grid-template-areas: 'heading navigation icons';
-    grid-template-columns: auto auto 1fr;
+    grid-template-columns: auto auto auto;
     column-gap: 2rem;
   }
 
@@ -2492,11 +2497,12 @@ input[type='checkbox'] {
   grid-area: icons;
   justify-self: end;
   padding-right: 0.8rem;
+  gap: 1.6rem;
 }
 
 .header__icons .shopify-app-block {
-  max-width: 4.4rem;
-  max-height: 4.4rem;
+  max-width: 3.6rem;
+  max-height: 3.6rem;
   overflow: hidden;
 }
 
@@ -2508,7 +2514,9 @@ input[type='checkbox'] {
 }
 
 .header__icon {
-  color: rgb(var(--color-foreground));
+  color: var(--header-icons-color);
+  background-color: #3e3844;
+  border-radius: 50%;
 }
 
 .header__icon span {
@@ -2525,16 +2533,16 @@ input[type='checkbox'] {
 }
 
 .header__icon .icon {
-  height: 2rem;
-  width: 2rem;
+  height: 1.6rem;
+  width: 1.6rem;
   fill: none;
   vertical-align: middle;
 }
 
 .header__icon,
 .header__icon--cart .icon {
-  height: 4.4rem;
-  width: 4.4rem;
+  height: 3.6rem;
+  width: 3.6rem;
   padding: 0;
 }
 
@@ -2765,7 +2773,7 @@ details[open] > .header__submenu {
 .header__menu-item {
   padding: 1.2rem;
   text-decoration: none;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 .header__menu-item:hover {
