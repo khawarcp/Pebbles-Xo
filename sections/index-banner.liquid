@@ -3,26 +3,37 @@
 <section class="color-{{ section.settings.color_scheme }} banner-wrapper">
     <div class="page-width">
         <div class="grid grid--2-col grid--1-col-tablet-down banner-content">
-            <div class="grid__item banner-text-content">
-               <h1 class="banner-title color-span">Strengthen Your Foundation with <span>PEBLZ</span></h1> 
-               <p class="banner-description">Our innovative cork pieces offer a unique way to enhance your foot muscles through simple, effective exercises.</p>
-               <div class="btn-row">
-                <a href="" class="custom-site-btn btn-green"><span class="btn-arrow"> {% render 'anchor-arrow' %} </span><span class="btn-text">Learn The Exercises</span></a>
-                <a href="" class="custom-site-btn btn-red"><span class="btn-arrow"> {% render 'anchor-arrow' %} </span><span class="btn-text">get your peblz</span></a>
-               </div>
+            <div class="grid__item banner-text-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {% if section.settings.heading != blank %}            
+                    <h1 class="banner-title color-span {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.heading }} </h1> 
+                {% endif %}
+                {% if section.settings.text != blank %}            
+                    <p class="banner-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.text }} </p>
+                {% endif %}
+              
+               {% unless section.settings.button_text_1 == blank and section.settings.button_text_2 %}                    
+                <div class="btn-row">
+                    {% render 'anchor', button_text: section.settings.button_text_1, button_url: section.settings.button_url_1, class: 'custom-site-btn btn-green' %}
+                    {% render 'anchor', button_text: section.settings.button_text_2, button_url: section.settings.button_url_2, class: 'custom-site-btn btn-red' %}
+                </div>
+            {% endunless %}
                
             </div>
-            <div class="grid__item banner-image">
-                <img src="https://cdn.shopify.com/s/files/1/0658/9733/2918/files/three-oval-colored-pebbles.png?v=1722843603" alt="">
-                <p class="spin-text"> {% render 'icon-spin' %} Drag to view 360 spin of Pebble</p>
+            <div class="grid__item banner-image {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                {% render 'image', image: section.settings.image, srcset: true, sizes: true, width: 428, height: 303, lazy_load: false %}
+                {% if section.settings.spin_text != blank %}
+                    <p class="spin-text"> {% render 'icon-spin' %} {{ section.settings.spin_text }} </p>                    
+                {% endif %}
             </div>
         </div>
-        <div class="scroll-down">
-            <a href="#.">
-                {% render 'scroll-down' %}
-                 <p>Scroll Down</p>
-            </a>
-        </div>
+        {% if section.settings.show_navigator and section.settings.scroll_text != blank %}            
+            <div class="scroll-down {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                <a href="{{ section.settings.scroll_url |  default: '#.' }}">
+                    {% render 'scroll-down' %}
+                     <p> {{ section.settings.scroll_text }} </p>
+                </a>
+            </div>
+        {% endif %}
     </div>
 </section>
 {% schema %}
@@ -34,6 +45,76 @@
                 "id": "color_scheme",
                 "label": "t:sections.all.colors.label",
                 "default": "scheme-1"
+            },
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "Strengthen Your Foundation with <span>PEBLZ</span>"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "Our innovative cork pieces offer a unique way to enhance your foot muscles through simple, effective exercises."
+            },
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            },
+            {
+                "type": "header",
+                "content": "Buttons"
+            },
+            {
+                "type": "text",
+                "id": "button_text_1",
+                "label": "Prmary Button Text",
+                "default": "Learn The Exercises"
+            },
+            {
+                "type": "url",
+                "id": "button_url_1",
+                "label": "Primary Button URL"
+            },
+            {
+                "type": "text",
+                "id": "button_text_2",
+                "label": "Secondary Button Text",
+                "default": "get your peblz"
+            },
+            {
+                "type": "url",
+                "id": "button_url_2",
+                "label": "Secondary Button URL"
+            },
+            {
+                "type": "text",
+                "id": "spin_text",
+                "label": "Spin Text",
+                "default": "Drag to view 360 spin of Pebble"
+            },
+            {
+                "type": "header",
+                "content": "Section Navigator"
+            },
+            {
+                "type": "checkbox",
+                "id": "show_navigator",
+                "label": "Show Navigator",
+                "default": true
+            },
+            {
+                "type": "url",
+                "id": "scroll_url",
+                "label": "Scroll Link"
+            },
+            {
+                "type": "text",
+                "id": "scroll_text",
+                "label": "Text",
+                "default": "Scroll Down"
             }
         ],
         "presets": [
@@ -43,3 +124,4 @@
         ]
     }
 {% endschema %}
+

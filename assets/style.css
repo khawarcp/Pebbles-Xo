@@ -74,6 +74,30 @@ img {
     fill: var(--color-red-anchor);
 }
 
+.btn-text-body .btn-text{
+    background-color: var(--gradient-background);
+}
+
+main ul {
+    list-style: none;
+    padding-left: 3rem;
+}
+
+main ul li {
+    position: relative;
+}
+
+main ul li::before {
+    content: '';
+    position: absolute;
+    background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/list-disc.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 1.9rem;
+    top: 4px;
+    left: -3rem;
+}
 
 @media screen and (min-width: 1440px) {
     .page-width {

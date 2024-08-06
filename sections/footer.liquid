@@ -29,7 +29,7 @@
 
 <footer class="footer color-{{ section.settings.color_scheme }} gradient section-{{ section.id }}-padding">
   {% if section.settings.footer_logo  != blank   %}
-  <div class="footer-logo-wrapper">
+  <div class="footer-logo-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
       <div class="page-width">
           <div class="logo-wrapper">
             {% render 'image-np', image: section.settings.footer_logo, srcset: true, imageURL: true, sizes: true, width: 734, height: 96, lazy_load: true %}

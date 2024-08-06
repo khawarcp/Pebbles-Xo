@@ -3,83 +3,37 @@
     "index_banner_XyhwnA": {
       "type": "index-banner",
       "settings": {
-        "color_scheme": "scheme-3"
+        "color_scheme": "scheme-3",
+        "heading": "Strengthen Your Foundation with <span>PEBLZ<\/span>",
+        "text": "Our innovative cork pieces offer a unique way to enhance your foot muscles through simple, effective exercises.",
+        "image": "shopify:\/\/shop_images\/three-oval-colored-pebbles.png",
+        "button_text_1": "Learn The Exercises",
+        "button_url_1": "",
+        "button_text_2": "get your peblz",
+        "button_url_2": "",
+        "spin_text": "Drag to view 360 spin of Pebble",
+        "show_navigator": true,
+        "scroll_url": "",
+        "scroll_text": "Scroll Down"
       }
     },
-    "featured_product_d6zYc6": {
-      "type": "featured-product",
-      "blocks": {
-        "text_CyFUxt": {
-          "type": "text",
-          "settings": {
-            "text": "{{ section.settings.product.vendor }}",
-            "text_style": "uppercase"
-          }
-        },
-        "title_QP3w4i": {
-          "type": "title",
-          "settings": {
-            "heading_size": "h1"
-          }
-        },
-        "price_CiVNMx": {
-          "type": "price",
-          "settings": {
-          }
-        },
-        "variant_picker_4emQRg": {
-          "type": "variant_picker",
-          "settings": {
-            "picker_type": "button",
-            "swatch_shape": "circle"
-          }
-        },
-        "quantity_selector_DyRBLb": {
-          "type": "quantity_selector",
-          "settings": {
-          }
-        },
-        "buy_buttons_PyqCqt": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_dynamic_checkout": true,
-            "show_gift_card_recipient": true
-          }
-        },
-        "share_R784mR": {
-          "type": "share",
-          "settings": {
-            "share_label": "Share"
-          }
-        }
-      },
-      "block_order": [
-        "text_CyFUxt",
-        "title_QP3w4i",
-        "price_CiVNMx",
-        "variant_picker_4emQRg",
-        "quantity_selector_DyRBLb",
-        "buy_buttons_PyqCqt",
-        "share_R784mR"
-      ],
+    "index_image_text_ikVArd": {
+      "type": "index-image-text",
       "settings": {
-        "product": "",
-        "color_scheme": "",
-        "secondary_background": false,
-        "media_size": "medium",
-        "constrain_to_viewport": true,
-        "media_fit": "contain",
-        "media_position": "left",
-        "image_zoom": "lightbox",
-        "hide_variants": false,
-        "enable_video_looping": false,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "heading": "Learn The Exercises &amp; <span>positioning<\/span>",
+        "text": "<p>I am purposely trying to stay away from stating that PEBLZ will heal\/cure particular foot conditions. I think “treat” might be a better way to discuss the work and also prevention. There are 4 exercises- what I call the Foundational Four. Each one has specific benefits for common foot problems. What I have discovered and strongly believe is that most foot problems stem from a weak arch that results in a mis-aligned skeletal anatomy. A strong foot is a healthy foot. People will be searching for help with plantar fasciitis, bunions, arch support, and neuropathy.<\/p><ul><li>The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps <\/li><li>The 51’s- great for balance training, neuropathy, and morton’s neuroma<\/li><li> The Arch-Pop great for fallen arches, flat feet, bunions, and weight training<\/li><li> The Gait Keeper- great for running, posture and hip & knee pain<\/li><\/ul>",
+        "image": "shopify:\/\/shop_images\/Learn_The_Exercises_positioning.jpg",
+        "button_text_1": "Learn The Exercises",
+        "button_url_1": "",
+        "button_text_2": "get your peblz",
+        "button_url_2": "",
+        "padding_top": 100,
+        "padding_bottom": 50
       }
     }
   },
   "order": [
     "index_banner_XyhwnA",
-    "featured_product_d6zYc6"
+    "index_image_text_ikVArd"
   ]
 }
