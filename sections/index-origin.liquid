@@ -1,0 +1,124 @@
+{{ 'index-origin.css' | asset_url | stylesheet_tag }}
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding origin-wapper" style="background-image: url('{{ section.settings.background_image | image_url }}');">
+  <div class="page-width">
+    <div class="origin-wrapper-inner">
+        {% unless section.settings.heading == blank and section.settings.text == blank %}            
+            <div class="section-text-header">
+                {% if section.settings.heading != blank %}                    
+                   <h2 class="section-text-title uppercase color-span {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.heading }} </h2>
+                {% endif %}
+                {% if section.settings.text != blank %}                    
+                  <p class="section-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.text }} </p>
+                {% endif %}               
+            </div>
+            {% endunless %}
+            {% if section.blocks.size > 0 %}
+                <div class="origin-items">
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'item' %}     
+                                {% unless block.settings.heading == blank and block.settings.text == blank %}                            
+                                <div class="origin-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}
+                                {% if settings.animations_reveal_on_scroll %}
+                                    data-cascade
+                                    style="--animation-order: {{ forloop.index }};"
+                                  {% endif %}>
+                                  <div class="origin-item-content">
+                                    <h3> {{ block.settings.heading }} </h3>
+                                    <p> {{ block.settings.text }} </p>
+                                  </div>
+                                </div>
+                            {% endunless %}
+                        {% endcase %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Origin",
+        "settings": [
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "The <span>origin</span> of PEBLZ"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "Explore Peblz' origin - crafted from premium cork for sustainable foot fitness."
+            },
+            {
+                "type": "image_picker",
+                "id": "background_image",
+                "label": "Background Image"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.all.padding.section_padding_heading"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 94
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 94
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "text",
+                        "label": "Text"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Origin"
+            }
+        ]
+    }
+{% endschema %}

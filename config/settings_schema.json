@@ -133,6 +133,12 @@
           "id": "color_h2_heading",
           "label": "H2 Heading",
           "default" : "#030303"
+        },
+        {
+          "type": "color",
+          "id": "desc_color",
+          "label": "Description Color",
+          "default" : "#D0D0D1"
         }
       ]
   },

@@ -106,11 +106,104 @@
         "padding_top": 50,
         "padding_bottom": 100
       }
+    },
+    "index_healthier_feet_QVxVkF": {
+      "type": "index-healthier-feet",
+      "blocks": {
+        "item_JrYPDC": {
+          "type": "item",
+          "settings": {
+            "heading": "The Peak",
+            "text": "Designed to apply pressure with precision",
+            "image": "shopify:\/\/shop_images\/peak.jpg"
+          }
+        },
+        "item_Ufr4Di": {
+          "type": "item",
+          "settings": {
+            "heading": "The slope",
+            "text": "Mimics the natural arch of the foot",
+            "image": "shopify:\/\/shop_images\/slope.jpg"
+          }
+        },
+        "item_4nTE4H": {
+          "type": "item",
+          "settings": {
+            "heading": "The mound",
+            "text": "Designed for a snug fit just in front of the heel",
+            "image": "shopify:\/\/shop_images\/mound.jpg"
+          }
+        },
+        "item_p3Cg6U": {
+          "type": "item",
+          "settings": {
+            "heading": "The cliff",
+            "text": "Allows clearance to work toes individually",
+            "image": "shopify:\/\/shop_images\/cliff.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_JrYPDC",
+        "item_Ufr4Di",
+        "item_4nTE4H",
+        "item_p3Cg6U"
+      ],
+      "settings": {
+        "color_scheme": "scheme-3",
+        "heading": "<span>healthier<\/span> feet anywhere, anytime.",
+        "text": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today.",
+        "button_text": "Get Treated Now",
+        "button_url": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "index_origin_HJaqpd": {
+      "type": "index-origin",
+      "blocks": {
+        "item_knE4BW": {
+          "type": "item",
+          "settings": {
+            "heading": "The Birth of Peblz",
+            "text": "Pre-pandemic, I offered hands-on therapy with great results. COVID ended in-person sessions, and a client requested Zoom sessions, inspiring the creation of Peblz."
+          }
+        },
+        "item_4anX3t": {
+          "type": "item",
+          "settings": {
+            "heading": "The Power of Arch-Pop",
+            "text": "As COVID eased, in-person treatments revealed \"The Arch-Pop\" exercise, which strengthened and aligned feet. Seeing its impact, I shared it widely and created Peblz to support the arch."
+          }
+        },
+        "item_yKmPbw": {
+          "type": "item",
+          "settings": {
+            "heading": "Crafting Peblz",
+            "text": "Experimenting with an old cork yoga wedge, I realized a symmetrical shape didn't work. I carved asymmetrical prototypes to reflect foot anatomy. Dedicated clients tested and provided feedback, leading to the creation of PEBLZ XO."
+          }
+        }
+      },
+      "block_order": [
+        "item_knE4BW",
+        "item_4anX3t",
+        "item_yKmPbw"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "heading": "The <span>origin<\/span> of PEBLZ",
+        "text": "Explore Peblz' origin - crafted from premium cork for sustainable foot fitness.",
+        "background_image": "shopify:\/\/shop_images\/origin-background.jpg",
+        "padding_top": 94,
+        "padding_bottom": 94
+      }
     }
   },
   "order": [
     "index_banner_XyhwnA",
     "index_image_text_ikVArd",
-    "index_steps_xTwxjy"
+    "index_steps_xTwxjy",
+    "index_healthier_feet_QVxVkF",
+    "index_origin_HJaqpd"
   ]
 }

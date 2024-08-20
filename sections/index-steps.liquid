@@ -36,7 +36,7 @@
                        {% when 'slide' %}
                             {% unless block.settings.left_text == blank and block.settings.right_text == blank and block.settings.left_image == blank and block.settings.right_image and block.settings.left_thumb_image == blank and block.settings.right_thumb_image %} 
                                 <div class="item">
-                                    <div class="grid grid--2-col grid--1-col-tablet-down slide-content">
+                                    <div class="grid grid--2-col grid--1-col-tablet-down slide-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                         <div class="grid__item slide-text">
                                             <div class="feet-thumbnails">
                                                 <div data-thumbnail="left" class="thumbnail-foot left-foot-thumbnail foot-thumbnail-active">
@@ -46,7 +46,7 @@
                                                     {% render 'image', image: block.settings.right_thumb_image, srcset: true, sizes: true, width: 66, height: 66, lazy_load: true %}
                                                 </div>
                                             </div>
-                                            <div class="richtext-content left-foot-content">
+                                            <div class="richtext-content left-foot-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                                 {{ block.settings.left_text }}
                                             </div>
                                             <div class="richtext-content right-foot-content hidden">
@@ -54,7 +54,7 @@
                                             </div>
                                             {% render 'anchor', button_text: section.settings.button_text, button_url: section.settings.button_url, class: 'custom-site-btn btn-white btn-green' %}
                                         </div>
-                                        <div class="grid__item slide-image">
+                                        <div class="grid__item slide-image {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                             <div class="left-foot-image">
                                                 {% render 'image', image: block.settings.left_image, srcset: true, sizes: true, width: 390, height: 306, lazy_load: true %}
                                             </div>

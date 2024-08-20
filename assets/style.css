@@ -82,6 +82,10 @@ img {
     background-color: #fff;
 }
 
+.btn-black .btn-text{
+    background-color: #1d1624;
+}
+
 main ul {
     list-style: none;
     padding-left: 3rem;
@@ -150,6 +154,20 @@ main ul li::before {
     bottom: -4.8rem;
 }
 
+
+.section-text-title,
+.section-description {
+    margin: 0;
+}
+
+.section-description {
+   font: 1.5rem;
+   line-height: 2.25rem;
+}
+
+.section-button-wrapper .custom-site-btn{
+    justify-content: center;
+}
 
 @media screen and (min-width: 1440px) {
     .page-width {
