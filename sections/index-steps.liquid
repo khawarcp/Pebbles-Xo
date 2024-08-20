@@ -1,0 +1,194 @@
+{{ 'index-steps.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'selectedFoot.js' | asset_url }}" defer="defer"></script>
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+<section class="section-{{ section.id }}-padding step-wraper">
+    <div class="page-width">
+        {% unless section.settings.heading == blank and section.settings.subheading  == blank and section.settings.text == blank %}            
+            <div class="step-text-header">
+                {% if section.settings.subheading != blank %}                    
+                  <h4 class="steps-subheading {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.subheading }} </h4>
+                {% endif %}
+                {% if section.settings.heading != blank %}                    
+                   <h2 class="step-text-title color-span {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.heading }} </h2>
+                {% endif %}
+                {% if section.settings.text != blank %}                    
+                  <p class="step-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.text }} </p>
+                {% endif %}               
+            </div>
+        {% endunless %}
+        <div class="step-guide-container owl-carousel-container">
+        <div id="step-guide" class="owl-carousel">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                       {% when 'slide' %}
+                            {% unless block.settings.left_text == blank and block.settings.right_text == blank and block.settings.left_image == blank and block.settings.right_image and block.settings.left_thumb_image == blank and block.settings.right_thumb_image %} 
+                                <div class="item">
+                                    <div class="grid grid--2-col grid--1-col-tablet-down slide-content">
+                                        <div class="grid__item slide-text">
+                                            <div class="feet-thumbnails">
+                                                <div data-thumbnail="left" class="thumbnail-foot left-foot-thumbnail foot-thumbnail-active">
+                                                    {% render 'image', image: block.settings.left_thumb_image, srcset: true, sizes: true, width: 66, height: 66, lazy_load: true %}
+                                                </div>
+                                                <div data-thumbnail="right" class="thumbnail-foot right-foot-thumbnail">
+                                                    {% render 'image', image: block.settings.right_thumb_image, srcset: true, sizes: true, width: 66, height: 66, lazy_load: true %}
+                                                </div>
+                                            </div>
+                                            <div class="richtext-content left-foot-content">
+                                                {{ block.settings.left_text }}
+                                            </div>
+                                            <div class="richtext-content right-foot-content hidden">
+                                                {{ block.settings.right_text }}
+                                            </div>
+                                            {% render 'anchor', button_text: section.settings.button_text, button_url: section.settings.button_url, class: 'custom-site-btn btn-white btn-green' %}
+                                        </div>
+                                        <div class="grid__item slide-image">
+                                            <div class="left-foot-image">
+                                                {% render 'image', image: block.settings.left_image, srcset: true, sizes: true, width: 390, height: 306, lazy_load: true %}
+                                            </div>
+                                            <div class="right-foot-image hidden">
+                                                {% render 'image', image: block.settings.right_image, srcset: true, sizes: true, width: 390, height: 306, lazy_load: true %}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endunless %}
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="slide-counter">
+            <span class="current-slide">1</span> / <span class="total-slides">2</span>            
+        </div>
+        
+    </div>
+    </div>
+</section>
+
+
+{% schema %}
+    {
+        "name": "Step Guide",
+        "settings": [
+            {
+                "type": "text",
+                "id": "subheading",
+                "label": "Subheading",
+                "default": "Step-by-Step Peblz Exercises"
+            },
+            {
+                "type": "html",
+                "id": "heading",
+                "label": "Heading",
+                "default": "The Plantar Foot and Calf <span>Stretch</span>"
+            },
+            {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps."
+            },
+            {
+                "type": "header",
+                "content": "Buttons"
+            },
+            {
+                "type": "text",
+                "id": "button_text",
+                "label": "Button Text",
+                "default": "See Complete Guide"
+            },
+            {
+                "type": "url",
+                "id": "button_url",
+                "label": "Button URL"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.all.padding.section_padding_heading"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 100
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 50
+            }
+        ],
+        "blocks": [
+            {
+                "type": "slide",
+                "name": "Slide",
+                "settings": [
+                    {
+                        "type": "header",
+                        "content": "Left Foot"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "left_text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "left_image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "left_thumb_image",
+                        "label": "Thumbnail Image"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Right Foot"
+                    },
+                    {
+                        "type": "richtext",
+                        "id": "right_text",
+                        "label": "Text"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "right_image",
+                        "label": "Image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "right_thumb_image",
+                        "label": "Thumbnail Image"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Step Guide"
+            }
+        ]
+    }
+{% endschema %}

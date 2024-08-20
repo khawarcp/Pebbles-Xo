@@ -78,6 +78,10 @@ img {
     background-color: var(--gradient-background);
 }
 
+.btn-white .btn-text{
+    background-color: #fff;
+}
+
 main ul {
     list-style: none;
     padding-left: 3rem;
@@ -98,6 +102,54 @@ main ul li::before {
     top: 4px;
     left: -3rem;
 }
+
+.thumbnail-foot {
+    border: 2px solid transparent;
+    border-radius: 50%;
+}
+
+.foot-thumbnail-active {
+    border-color: var(--color-h2-heading);    
+}
+
+/* owl dots and owl navs */
+.owl-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.owl-carousel button.owl-dot {
+    height: 2px;
+    width: 20px;
+    background: #D0D0D1;
+    transition: background 0.3s ease;
+}
+
+.owl-carousel button.owl-dot.active {
+    background: var(--color-red-anchor);
+}
+
+.owl-nav button:hover img {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(46%) saturate(5013%) hue-rotate(334deg) brightness(100%) contrast(102%);
+}
+
+.owl-nav {
+    position: absolute;
+    left: 58%;
+    transform: translateX(-58%);
+    bottom: -6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.owl-dots {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -4.8rem;
+}
+
 
 @media screen and (min-width: 1440px) {
     .page-width {

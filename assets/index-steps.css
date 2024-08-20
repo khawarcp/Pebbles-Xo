@@ -1,0 +1,149 @@
+.step-text-header {
+    text-align: center;
+}
+
+.step-text-header * {
+    margin: 0;
+}
+
+.steps-subheading {
+    margin-bottom: 1.2rem;
+    line-height: 21.24px;
+    text-transform: uppercase;
+    color: var(--color-red-anchor);
+}
+
+.step-guide-container {
+    margin-top: 4.8rem;
+}
+
+.step-text-title {
+    text-transform: uppercase;
+    line-height: 49.56px;
+    margin-bottom: 1.6rem;
+    color: var(--color-h2-heading)
+}
+
+.step-description {
+    line-height: 24px;
+}
+
+.owl-carousel-container {
+    position: relative;
+}
+
+.step-guide-container .slide-counter {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.step-guide-container .owl-carousel .item {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #FFD1C2;
+}
+
+.step-guide-container .owl-carousel .slide-content {
+    padding: 6.4rem 8rem 6.5rem 4.8rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Custom dots as a line */
+.step-guide-container .owl-dots {
+    display: flex;
+    justify-content: center;
+}
+
+.step-guide-container .owl-carousel button.owl-dot {
+    height: 2px;
+    width: 20px;
+    background: #D0D0D1;
+    transition: background 0.3s ease;
+}
+
+.step-guide-container .owl-carousel button.owl-dot.active {
+    background: var(--color-red-anchor);
+}
+
+.step-guide-container .owl-carousel .item .slide-text img {
+    width: 6.6rem;
+    height: 6.6rem;
+}
+
+.slide-text * {
+    margin: 0;
+}
+
+.slide-text > img {
+    margin-bottom: 2rem;
+}
+
+.slide-text h3 {
+    margin-bottom: 2.4rem;
+    text-transform: uppercase;
+    color: var(--color-h2-heading);
+}
+
+
+.richtext-content {
+    margin-bottom: 4rem;
+}
+
+.slide-image {
+    padding-left: 3rem;
+}
+
+.feet-thumbnails {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.8rem;
+    margin-bottom: 1.6rem;
+    cursor: pointer;
+}
+
+.richtext-content h4 {
+    color: var(--color-red-anchor);
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.step-wraper {
+    position: relative;
+}
+
+.step-wraper::before {
+    content: '';
+    position: absolute;
+    background-image: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/circle-step-before.png');
+    top: 0;
+    right: 90px;
+    background-repeat: no-repeat;
+    width: 310px;
+    height: 305px;
+    background-position: top;
+    background-size: contain;
+    overflow: hidden;
+    z-index: 0;
+}
+.step-wraper::after {
+    content: '';
+    position: absolute;
+    background-image: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/union-step-after.png');
+    bottom: 0;
+    left: 70px;
+    background-repeat: no-repeat;
+    width: 338px;
+    height: 298px;
+    background-position: top;
+    background-size: contain;
+    overflow: hidden;
+    z-index: 0;
+}

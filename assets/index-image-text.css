@@ -18,7 +18,7 @@
 
 .image-text-title {
     text-align: center;
-    color: #030303;
+    color: var(--color-h2-heading);
     margin-top: 0;
     margin-bottom: 4.8rem;
 }

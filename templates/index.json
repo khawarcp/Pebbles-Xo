@@ -30,10 +30,87 @@
         "padding_top": 100,
         "padding_bottom": 50
       }
+    },
+    "index_steps_xTwxjy": {
+      "type": "index-steps",
+      "blocks": {
+        "slide_8Mfxa4": {
+          "type": "slide",
+          "settings": {
+            "left_text": "<h4>one Up Left<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "left_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
+            "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+          }
+        },
+        "slide_GAC9ik": {
+          "type": "slide",
+          "settings": {
+            "left_text": "<h4>one Up Left<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "left_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
+            "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+          }
+        },
+        "slide_aAEhAN": {
+          "type": "slide",
+          "settings": {
+            "left_text": "<h4>one Up Left<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "left_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
+            "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+          }
+        },
+        "slide_BHBGXN": {
+          "type": "slide",
+          "settings": {
+            "left_text": "<h4>one Up Left<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "left_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
+            "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+          }
+        },
+        "slide_jwJbtG": {
+          "type": "slide",
+          "settings": {
+            "left_text": "<h4>one Up Left<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "left_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
+            "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
+            "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+          }
+        }
+      },
+      "block_order": [
+        "slide_8Mfxa4",
+        "slide_GAC9ik",
+        "slide_aAEhAN",
+        "slide_BHBGXN",
+        "slide_jwJbtG"
+      ],
+      "settings": {
+        "subheading": "Step-by-Step Peblz Exercises",
+        "heading": "The Plantar Foot and Calf <span>Stretch<\/span>",
+        "text": "The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps.",
+        "button_text": "See Complete Guide",
+        "button_url": "",
+        "padding_top": 50,
+        "padding_bottom": 100
+      }
     }
   },
   "order": [
     "index_banner_XyhwnA",
-    "index_image_text_ikVArd"
+    "index_image_text_ikVArd",
+    "index_steps_xTwxjy"
   ]
 }

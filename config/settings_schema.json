@@ -127,6 +127,12 @@
           "id": "red_btn",
           "label": "Red Anchor",
           "default" : "#FF6E3D"
+        },
+        {
+          "type": "color",
+          "id": "color_h2_heading",
+          "label": "H2 Heading",
+          "default" : "#030303"
         }
       ]
   },
