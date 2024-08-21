@@ -1,0 +1,209 @@
+{% comment %} {{ 'index-health-professional.css' | asset_url | stylesheet_tag }} {% endcomment %}
+<script src="{{ 'index-health-professional.js' | asset_url }}" type="text/javascript" defer></script>
+{%- style -%}
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+    }
+  
+    @media screen and (min-width: 750px) {
+      .section-{{ section.id }}-padding {
+        padding-top: {{ section.settings.padding_top }}px;
+        padding-bottom: {{ section.settings.padding_bottom }}px;
+      }
+    }
+  {%- endstyle -%}
+
+  <style>
+    <style>
+body {font-family: Arial;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+</style>
+  </style>
+
+<section class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding health-professional-wapper">
+  <div class="page-width">
+    <div class="health-professional-inner">
+            {% if section.blocks.size > 0 %}
+               <div class="health-tab-wrapper">
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
+                    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
+                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+                </div>
+
+                    <div id="London" class="tabcontent">
+                    <h3>London</h3>
+                    <p>London is the capital city of England.</p>
+                    </div>
+
+                    <div id="Paris" class="tabcontent">
+                    <h3>Paris</h3>
+                    <p>Paris is the capital of France.</p> 
+                    </div>
+
+                    <div id="Tokyo" class="tabcontent">
+                    <h3>Tokyo</h3>
+                    <p>Tokyo is the capital of Japan.</p>
+                    </div>
+               </div>
+                {% comment %} <div class="about-items-list">
+                    <div class="accordion-faq-wrap">
+                        {% for block in section.blocks %}
+                            {% case block.type %}
+                                {% when 'item' %}
+                                    {% if block.settings.heading != blank %}                                        
+                                        <div class="item-faq-wrapper">
+                                                <button class="accordion-faqs"> <h3 class="professional-title">{{ block.settings.heading }}</h3> </button>
+                                            <div class="panel-faqs">
+                                                <div class="health-panel-inner">
+                                                    <div class="health-panel-image">
+                                                       <div class="health-panel-image-inner">
+                                                        {% render 'image-np', image: block.settings.image, srcset: true, sizes: true, width: 321, height: 380, lazy_load: true %}
+                                                       </div>
+                                                    </div>
+                                                    <div class="health-panel-content"> 
+                                                        {% render 'image-np', image: block.settings.icon, srcset: true, sizes: true, width: 80, height: 80, lazy_load: true %}                                                           
+                                                        {{ block.settings.text }}
+                                                        <div class="health-panel-btn">
+                                                            {% render 'anchor', button_text: block.settings.button_text, button_url: block.settings.button_url, class: 'custom-site-btn btn-black btn-green' %}
+                                                    </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                            {% endcase %}
+                        {% endfor %}
+                    </div>
+                </div> {% endcomment %}
+            {% endif %}    
+    </div>
+  </div>
+</section>
+
+{% schema %}
+    {
+        "name": "Health Professional",
+        "settings": [
+            {
+                "type": "color_scheme",
+                "id": "color_scheme",
+                "label": "t:sections.all.colors.label",
+                "default": "scheme-4"
+            },
+            {
+                "type": "header",
+                "content": "t:sections.all.padding.section_padding_heading"
+            },
+            {
+                "type": "range",
+                "id": "padding_top",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_top",
+                "default": 100
+            },
+            {
+                "type": "range",
+                "id": "padding_bottom",
+                "min": 0,
+                "max": 100,
+                "step": 2,
+                "unit": "px",
+                "label": "t:sections.all.padding.padding_bottom",
+                "default": 100
+            }
+        ],
+        "blocks": [
+            {
+                "type": "item",
+                "name": "Item",
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "heading",
+                        "label": "Heading"
+                    },
+                    {
+                        "type": "inline_richtext",
+                        "id": "text",
+                        "label": "Text"               
+                    },
+                    {
+                        "type": "header",
+                        "content": "Buttons"
+                    },
+                    {
+                        "type": "text",
+                        "id": "button_text",
+                        "label": "Button Text",
+                        "default": "Get Treated Now"
+                    },
+                    {
+                        "type": "url",
+                        "id": "button_url",
+                        "label": "Button URL"
+                    },
+                    {
+                        "type": "header",
+                        "content": "Images"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Image"
+                    }
+                ]
+            }            
+        ],
+        "presets": [
+            {
+                "name": "Health Professional"
+            }
+        ]
+    }
+{% endschema %}

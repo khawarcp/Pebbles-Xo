@@ -1,5 +1,7 @@
 h1,h2,h3,h4,h5,h6{
     letter-spacing: normal;
+    margin-block-start: 1rem;
+    margin-block-end: 1rem;
 }
 
 img {
@@ -13,6 +15,10 @@ img {
 
 .color-span span{
     color: var(--header-icons-color)
+}
+
+.color-span-green span{
+    color: var(--color-green-anchor)
 }
 
 .header-stick-not-active{
@@ -167,6 +173,11 @@ main ul li::before {
 
 .section-button-wrapper .custom-site-btn{
     justify-content: center;
+}
+
+.section-description,
+.section-text-header {
+    text-align: center;
 }
 
 @media screen and (min-width: 1440px) {

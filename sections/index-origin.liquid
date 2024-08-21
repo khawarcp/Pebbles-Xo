@@ -38,8 +38,8 @@
                                     style="--animation-order: {{ forloop.index }};"
                                   {% endif %}>
                                   <div class="origin-item-content">
-                                    <h3> {{ block.settings.heading }} </h3>
-                                    <p> {{ block.settings.text }} </p>
+                                    <h3 class="origin-item-heading"> {{ block.settings.heading }} </h3>
+                                    <p class="origin-item-info"> {{ block.settings.text }} </p>
                                   </div>
                                 </div>
                             {% endunless %}
@@ -101,6 +101,7 @@
             {
                 "type": "item",
                 "name": "Item",
+                "limit": 3,
                 "settings": [
                     {
                         "type": "text",

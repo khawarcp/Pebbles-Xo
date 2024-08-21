@@ -1,0 +1,126 @@
+.item-faq-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.health-panel-image img {
+    border-radius: 1.6rem;
+    transform: rotate(-5deg);
+}
+
+    .health-panel-image-inner {
+    position: relative;
+}
+
+.health-panel-image-inner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid var(--color-red-anchor);
+    height: 100%;
+    width: 100%;
+    border-radius: 1.6rem;
+}
+
+.item-faq-wrapper:not(:last-child) {
+    padding-bottom: 7.2rem;
+}
+
+.accordion-faqs {
+    width: 30%;
+}
+
+.panel-faqs {
+    width: 70%;
+}
+
+.accordion-faqs {
+    cursor: pointer;
+    border: none;
+    text-align: left;
+    outline: none;
+    transition:all 0.4s ease;
+    background-color: inherit;
+    padding: 0;
+  }
+
+
+  .health-panel-inner {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.health-panel-image {
+    width: 50%;
+}
+
+.health-panel-content {
+    width: 50%;
+}
+
+  .professional-title {
+    margin: 0;
+    font-size: 2.4rem;
+    line-height: 2.916rem;
+}
+  
+  .panel-faqs {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+  }
+
+
+.panel-faqs p {
+    margin: 0;
+    padding-bottom: 40px;
+}
+
+.accordion-faqs.accordion-active .professional-title {
+    position: relative;
+    padding-left: 4.8rem;
+    transition: all .2s ease;
+    font-size: 3.2rem;
+    color: var(--color-red-anchor);
+    line-height: 3.392rem;
+}
+
+.accordion-active .professional-title::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 3.2rem;
+    background-color: var(--color-red-anchor);
+    height: 1px;
+    transition: all .2s ease;
+}
+
+
+
+@media screen and (max-width: 1199px) {
+    .accordion-faqs .professional-title {
+        padding: 20px 0;
+    }
+}
+@media screen and (max-width: 991px) {
+
+    .accordion-faqs .professional-title {
+        padding: 15px 0;
+    } 
+    .accordion-active .professional-title:before {
+        top: 47%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .accordion-faqs .professional-title {
+        padding: 10px 0;
+    } 
+}

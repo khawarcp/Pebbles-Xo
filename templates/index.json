@@ -190,12 +190,119 @@
         "item_yKmPbw"
       ],
       "settings": {
-        "color_scheme": "",
         "heading": "The <span>origin<\/span> of PEBLZ",
         "text": "Explore Peblz' origin - crafted from premium cork for sustainable foot fitness.",
         "background_image": "shopify:\/\/shop_images\/origin-background.jpg",
         "padding_top": 94,
         "padding_bottom": 94
+      }
+    },
+    "index_exercise_FEAFLr": {
+      "type": "index-exercise",
+      "blocks": {
+        "item_XUX6fa": {
+          "type": "item",
+          "settings": {
+            "heading": "plantar foot & calf stretch",
+            "text": "<ul><li>Don’t lean forward-shift your weight<\/li><li>Round 1 keep your knee super straight<\/li><li>Round 2 stay grounded on your outer heel<\/li><\/ul>"
+          }
+        },
+        "item_LrttJE": {
+          "type": "item",
+          "settings": {
+            "heading": "Pointers for 51s",
+            "text": "<ul><li>Don’t let your ankle move side to side<\/li><li>Work one foot at a time and double prop using the spare pebl in the standard position<\/li><li>Try it seated for better dexterity<\/li><\/ul>"
+          }
+        },
+        "item_TaRpMw": {
+          "type": "item",
+          "settings": {
+            "heading": "Arch-pop",
+            "text": "<ul><li>Cramps are OK just keep going<\/li><li>Stay engaged at 5<\/li><li>Adjust the pebl for a smaller lift for easier access to the ball of #1<\/li><\/ul>"
+          }
+        },
+        "item_Vipc9H": {
+          "type": "item",
+          "settings": {
+            "heading": "gait keeper",
+            "text": "<ul><li>Keep moving<\/li><li>Keep your focus straight ahead<\/li><li>Small bends<\/li><\/ul>"
+          }
+        }
+      },
+      "block_order": [
+        "item_XUX6fa",
+        "item_LrttJE",
+        "item_TaRpMw",
+        "item_Vipc9H"
+      ],
+      "settings": {
+        "heading": "<span>Pointers<\/span> in PEBLZ Exercise",
+        "text": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "index_health_professional_KXG6RW": {
+      "type": "index-health-professional",
+      "blocks": {
+        "item_MWPq3P": {
+          "type": "item",
+          "settings": {
+            "heading": "For Athletes",
+            "text": "Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess.",
+            "button_text": "Learn More",
+            "button_url": "",
+            "icon": "shopify:\/\/shop_images\/athelet-icon.png",
+            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+          }
+        },
+        "item_Drk97q": {
+          "type": "item",
+          "settings": {
+            "heading": "For Yoga & Pilates Studios",
+            "text": "Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess.",
+            "button_text": "Learn More",
+            "button_url": "",
+            "icon": "shopify:\/\/shop_images\/athelet-icon.png",
+            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+          }
+        },
+        "item_QdJPCU": {
+          "type": "item",
+          "settings": {
+            "heading": "Personal Trainers & Physical Therapists",
+            "text": "Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess.",
+            "button_text": "Learn More",
+            "button_url": "",
+            "icon": "shopify:\/\/shop_images\/athelet-icon.png",
+            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "item_MWPq3P",
+        "item_Drk97q",
+        "item_QdJPCU"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "index_google_reviews_YQKE4R": {
+      "type": "index-google-reviews",
+      "settings": {
+        "padding_top": 100,
+        "padding_bottom": 100
+      }
+    },
+    "index_faq_UeWxPP": {
+      "type": "index-faq",
+      "settings": {
+        "color_scheme": "",
+        "padding_top": 100,
+        "padding_bottom": 100
       }
     }
   },
@@ -204,6 +311,10 @@
     "index_image_text_ikVArd",
     "index_steps_xTwxjy",
     "index_healthier_feet_QVxVkF",
-    "index_origin_HJaqpd"
+    "index_origin_HJaqpd",
+    "index_exercise_FEAFLr",
+    "index_health_professional_KXG6RW",
+    "index_google_reviews_YQKE4R",
+    "index_faq_UeWxPP"
   ]
 }

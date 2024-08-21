@@ -1,0 +1,42 @@
+.exercise-inner .section-text-title {
+    margin-bottom: 4rem;
+    color: #030303;
+}
+
+.exercise-items {
+    padding: 2.4rem;
+    background-color: #fff;
+}
+
+.exercise-items {
+    border-radius: 1.6rem;
+}
+
+.exercise-item {
+    background-color: #F5F5F6;
+    padding: 1.5rem;
+    border-radius: 1.6rem;
+}
+
+.excercise-heading {
+    margin: 0;
+    color: #030303;
+    min-height: 5.6rem;
+    margin-bottom: 1rem;
+}
+
+.exercise-content .richtext-content ul {
+    margin: 0;
+    line-height: 2.6rem;
+}
+.exercise-content .richtext-content {
+    margin-bottom: 0;
+}
+
+main .exercise-content .richtext-content ul li::before {
+    background-image: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/green-arrow-list.svg');
+}
+
+.exercise-content ul li:not(:last-child) {
+    margin-bottom: 1.2rem;
+}

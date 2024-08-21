@@ -1,4 +1,4 @@
-{{ 'index-healthier-feet.css' | asset_url | stylesheet_tag }}
+{{ 'index-exercise.css' | asset_url | stylesheet_tag }}
 {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -13,13 +13,13 @@
     }
   {%- endstyle -%}
 
-<section class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding healthier-feet-wapper">
+<section class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding exercise-wapper">
   <div class="page-width">
-    <div class="healther-inner">
+    <div class="exercise-inner">
         {% unless section.settings.heading == blank and section.settings.text == blank %}            
             <div class="section-text-header">
                 {% if section.settings.heading != blank %}                    
-                   <h2 class="section-text-title uppercase color-span {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.heading }} </h2>
+                   <h2 class="section-text-title uppercase color-span-green {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.heading }} </h2>
                 {% endif %}
                 {% if section.settings.text != blank %}                    
                   <p class="section-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ section.settings.text }} </p>
@@ -27,23 +27,20 @@
             </div>
         {% endunless %}
             {% if section.blocks.size > 0 %}
-                <div class="features-wapper">
-                    <div class="feature-items">
+                <div class="exercise-wapper">
+                    <div class="grid exercise-items">
                         {% for block in section.blocks %}
                             {% case block.type %}
                                 {% when 'item' %}     
                                     {% unless block.settings.heading == blank and block.settings.text == blank %}                            
-                                    <div class="feature-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}
+                                    <div class="grid__item exercise-item {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}" {{ block.shopify_attributes }}
                                     {% if settings.animations_reveal_on_scroll %}
                                         data-cascade
                                         style="--animation-order: {{ forloop.index }};"
                                       {% endif %}>
-                                        <div class="feature-image">
-                                            {% render 'image', image: block.settings.image, srcset: true, sizes: true, width: 272, height: 194, lazy_load: true %}
-                                        </div>
-                                        <div class="fearure-content">
-                                            <h3> {{ block.settings.heading }} </h3>
-                                            <p> {{ block.settings.text }} </p>
+                                        <div class="exercise-content">
+                                            <h4 class="uppercase excercise-heading"> {{ block.settings.heading }} </h4>
+                                            <div class="richtext-content"> {{ block.settings.text }} </div>
                                         </div>
                                     </div>
                                 {% endunless %}
@@ -52,50 +49,24 @@
                     </div>
                 </div>
             {% endif %}
-            <div class="section-button-wrapper">
-                {% render 'anchor', button_text: section.settings.button_text, button_url: section.settings.button_url, class: 'custom-site-btn btn-black btn-red' %}
-            </div>
-        
     </div>
   </div>
 </section>
 
 {% schema %}
     {
-        "name": "Healthier Feet",
+        "name": "Excercise",
         "settings": [
-            {
-                "type": "color_scheme",
-                "id": "color_scheme",
-                "label": "t:sections.all.colors.label",
-                "default": "scheme-1"
-            },
             {
                 "type": "html",
                 "id": "heading",
                 "label": "Heading",
-                "default": "<span>healthier</span> feet anywhere, anytime."
+                "default": "<span>Pointers</span> in PEBLZ Exercise"
             },
             {
                 "type": "inline_richtext",
                 "id": "text",
-                "label": "Text",
-                "default": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today."
-            },
-            {
-                "type": "header",
-                "content": "Buttons"
-            },
-            {
-                "type": "text",
-                "id": "button_text",
-                "label": "Button Text",
-                "default": "Get Treated Now"
-            },
-            {
-                "type": "url",
-                "id": "button_url",
-                "label": "Button URL"
+                "label": "Text"               
             },
             {
                 "type": "header",
@@ -119,14 +90,13 @@
                 "step": 2,
                 "unit": "px",
                 "label": "t:sections.all.padding.padding_bottom",
-                "default": 50
+                "default": 100
             }
         ],
         "blocks": [
             {
                 "type": "item",
                 "name": "Item",
-                "limit": 4,
                 "settings": [
                     {
                         "type": "text",
@@ -134,21 +104,16 @@
                         "label": "Heading"
                     },
                     {
-                        "type": "inline_richtext",
+                        "type": "richtext",
                         "id": "text",
                         "label": "Text"
-                    },
-                    {
-                        "type": "image_picker",
-                        "id": "image",
-                        "label": "Image"
                     }
                 ]
             }
         ],
         "presets": [
             {
-                "name": "Healthier Feet"
+                "name": "Excercise"
             }
         ]
     }
