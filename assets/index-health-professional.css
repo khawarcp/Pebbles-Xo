@@ -1,126 +1,266 @@
-.item-faq-wrapper {
-    display: flex;
-    justify-content: center;
+.health-tab-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.tab {
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+
+.tab button {
+  background-color: inherit;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 18px;
+}
+
+.tab button.active {
+  border-bottom: 3px solid #ff5733;
+  font-weight: bold;
+}
+
+.tabcontent {
+  display: none;
+  padding: 20px 0;
+  border-top: none;
+}
+
+.tabcontent .content-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.tabcontent .tab-image {
+  max-width: 300px;
+  margin-right: 20px;
+  border-radius: 10px;
+}
+
+.tabcontent .tab-description {
+  max-width: 600px;
+}
+
+.tabcontent h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.tabcontent p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.tabcontent .learn-more {
+  display: inline-block;
+  margin-top: 15px;
+  color: #28a745;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.tabcontent .learn-more:hover {
+  text-decoration: underline;
+}
+.health-tab-wrapper {
+  display: flex;
+}
+
+.health-tab-wrapper .tab {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 0px;
+}
+
+.health-tab-wrapper .tab button {
+  color: var(--Neutral-Grey-02, #e6e6e7);
+  font-family: Cabin;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  padding: 35px 0;
+  border: 0px;
+  gap: 16px;
+  text-align: left;
+}
+
+.health-tab-wrapper .tab button::before {
+  width: 0;
+  height: 1px;
+  background-color: #ff8d67;
+  content: "";
+  display: block;
+  transition: 0.3s all;
+  position: absolute;
+  left: 0px;
+  margin: auto;
+  top: 0px;
+  bottom: 0px;
+}
+
+.health-tab-wrapper .tab button.active::before {
+  width: 32px;
+}
+
+.health-tab-wrapper .tab button.active {
+  color: var(--main-colors-ff-8-d-67, #ff6e3d);
+  font-family: Aldrich;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 106%; /* 33.92px */
+  text-transform: uppercase;
+  padding-left: 46px;
+}
+.tabcontent .content-wrapper {
+  padding-left: 0;
+}
+
+.tabcontent {
+  width: 60%;
+}
+
+.health-tab-wrapper .tab {
+  width: 40%;
+}
+
+.athletes-img {
+  position: relative;
+  border-radius: 12.947px;
+  border: 1.142px solid var(--main-colors-ff-8-d-67, #ff6e3d);
+}
+
+.athletes-img img {
+  margin: 0px auto;
+  margin-right: 0px !important;
+  transform: rotate(-5deg);
+  border-radius: 1.6rem;
+  max-width: unset;
+}
+
+.tabcontent .tab-description {
+  padding-left: 40px;
+}
+
+.alhelete-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.tabcontent .tab-description p {
+  margin: 40px 0px;
+  color: var(--Neutral-Grey-03, #d0d0d1);
+  font-family: Cabin;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 22.5px */
+}
+
+@media screen and (max-width: 1199px) {
+  .health-tab-wrapper .tab button.active {
+    font-size: 25px;
+  }
+
+  .health-tab-wrapper .tab button {
+    font-size: 18px;
+    padding: 20px 0;
+  }
+
+  .health-tab-wrapper {
     align-items: center;
-    gap: 2rem;
-}
+  }
 
-.health-panel-image img {
-    border-radius: 1.6rem;
-    transform: rotate(-5deg);
-}
+  .health-tab-wrapper .tab {
+    width: 35%;
+  }
 
-    .health-panel-image-inner {
-    position: relative;
-}
+  .tabcontent {
+    width: 65%;
+  }
 
-.health-panel-image-inner::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    border: 1px solid var(--color-red-anchor);
-    height: 100%;
-    width: 100%;
-    border-radius: 1.6rem;
+  .tabcontent .tab-description p {
+    font-size: 14px;
+    margin: 20px 0px;
+  }
 }
-
-.item-faq-wrapper:not(:last-child) {
-    padding-bottom: 7.2rem;
-}
-
-.accordion-faqs {
-    width: 30%;
-}
-
-.panel-faqs {
-    width: 70%;
-}
-
-.accordion-faqs {
-    cursor: pointer;
-    border: none;
-    text-align: left;
-    outline: none;
-    transition:all 0.4s ease;
-    background-color: inherit;
+@media screen and (max-width: 991px) {
+  .accordion-faqs .professional-title {
+    padding: 15px 0;
+  }
+  .accordion-active .professional-title:before {
+    top: 47%;
+  }
+  .health-tab-wrapper {
+    flex-direction: column;
     padding: 0;
   }
 
-
-  .health-panel-inner {
+  .health-tab-wrapper .tab {
+    width: 100%;
     display: flex;
-    gap: 3rem;
-    justify-content: center;
-    align-items: center;
-}
-
-.health-panel-image {
-    width: 50%;
-}
-
-.health-panel-content {
-    width: 50%;
-}
-
-  .professional-title {
-    margin: 0;
-    font-size: 2.4rem;
-    line-height: 2.916rem;
-}
-  
-  .panel-faqs {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    flex-direction: row;
   }
 
+  .tabcontent {
+    width: 100%;
+  }
 
-.panel-faqs p {
-    margin: 0;
-    padding-bottom: 40px;
-}
+  .health-tab-wrapper .tab button {
+    width: 33.33%;
+    font-size: 14px;
+    padding: 0;
+    text-transform: capitalize;
+  }
 
-.accordion-faqs.accordion-active .professional-title {
-    position: relative;
-    padding-left: 4.8rem;
-    transition: all .2s ease;
-    font-size: 3.2rem;
-    color: var(--color-red-anchor);
-    line-height: 3.392rem;
-}
+  .health-tab-wrapper .tab button.active {
+    padding: 0;
+    font-size: 14px;
+    text-transform: capitalize;
+  }
 
-.accordion-active .professional-title::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    width: 3.2rem;
-    background-color: var(--color-red-anchor);
-    height: 1px;
-    transition: all .2s ease;
-}
-
-
-
-@media screen and (max-width: 1199px) {
-    .accordion-faqs .professional-title {
-        padding: 20px 0;
-    }
-}
-@media screen and (max-width: 991px) {
-
-    .accordion-faqs .professional-title {
-        padding: 15px 0;
-    } 
-    .accordion-active .professional-title:before {
-        top: 47%;
-    }
+  .health-tab-wrapper .tab button::before {
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
-    .accordion-faqs .professional-title {
-        padding: 10px 0;
-    } 
+  .accordion-faqs .professional-title {
+    padding: 10px 0;
+  }
+  .health-tab-wrapper .tab {
+    flex-direction: column;
+  }
+
+  .health-tab-wrapper .tab button,
+  .health-tab-wrapper .tab button.active {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    padding-bottom: 30px;
+    font-family: Aldrich;
+  }
+
+  .tabcontent .content-wrapper {
+    flex-direction: column;
+  }
+
+  .athletes-img {
+    margin-bottom: 30px;
+  }
+
+  .tabcontent .tab-description {
+    padding-left: 0px;
+    margin-top: 30px;
+  }
 }

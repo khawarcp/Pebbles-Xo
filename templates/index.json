@@ -42,7 +42,8 @@
             "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
             "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
             "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
-            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png",
+            "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0658\/9733\/2918\/files\/file_example_MP3_1MG_1.mp3?v=1724334114"
           }
         },
         "slide_GAC9ik": {
@@ -53,7 +54,8 @@
             "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
             "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
             "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
-            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png",
+            "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0658\/9733\/2918\/files\/file_example_MP3_1MG_1.mp3?v=1724334114"
           }
         },
         "slide_aAEhAN": {
@@ -64,7 +66,8 @@
             "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
             "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
             "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
-            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png",
+            "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0658\/9733\/2918\/files\/file_example_MP3_1MG_1.mp3?v=1724334114"
           }
         },
         "slide_BHBGXN": {
@@ -75,7 +78,8 @@
             "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
             "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
             "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
-            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png",
+            "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0658\/9733\/2918\/files\/file_example_MP3_1MG_1.mp3?v=1724334114"
           }
         },
         "slide_jwJbtG": {
@@ -86,7 +90,8 @@
             "left_thumb_image": "shopify:\/\/shop_images\/left-foot-thumbnail.png",
             "right_text": "<h4>one Up Right<\/h4><h3>The Plantar Foot & Calf Stretch<\/h3><p>The PEBL slightly angled placed just in front of your heel lifting your arch.<\/p>",
             "right_image": "shopify:\/\/shop_images\/Left_foot_a03c6cca-576b-4488-898f-c894ebee3418.png",
-            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png"
+            "right_thumb_image": "shopify:\/\/shop_images\/right-foot-thumbnail.png",
+            "audio_url": "https:\/\/cdn.shopify.com\/s\/files\/1\/0658\/9733\/2918\/files\/file_example_MP3_1MG_1.mp3?v=1724334114"
           }
         }
       },
@@ -101,8 +106,6 @@
         "subheading": "Step-by-Step Peblz Exercises",
         "heading": "The Plantar Foot and Calf <span>Stretch<\/span>",
         "text": "The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps.",
-        "button_text": "See Complete Guide",
-        "button_url": "",
         "padding_top": 50,
         "padding_bottom": 100
       }
@@ -285,7 +288,7 @@
         "item_QdJPCU"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "padding_top": 100,
         "padding_bottom": 100
       }
@@ -299,8 +302,92 @@
     },
     "index_faq_UeWxPP": {
       "type": "index-faq",
+      "blocks": {
+        "faq_kjbfdT": {
+          "type": "faq",
+          "settings": {
+            "quiz": "Unlocking the Benefits of Natural Cork in Fitness?",
+            "answer": "<p>Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess. Propel your performance to new heights with Peblz, designed to bolster strength and agility.<\/p>"
+          }
+        },
+        "faq_7gwkkk": {
+          "type": "faq",
+          "settings": {
+            "quiz": "Top Tips for Maximizing Your Foot Strengthening Routine?",
+            "answer": "<p>Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess. Propel your performance to new heights with Peblz, designed to bolster strength and agility.<\/p>"
+          }
+        },
+        "faq_imFnmB": {
+          "type": "faq",
+          "settings": {
+            "quiz": "How Peblz Enhance Athletic Performance?",
+            "answer": "<p>Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess. Propel your performance to new heights with Peblz, designed to bolster strength and agility.<\/p>"
+          }
+        },
+        "faq_mR64cK": {
+          "type": "faq",
+          "settings": {
+            "quiz": "Essential Foot Strengthening Exercises for Beginners?",
+            "answer": "<p>Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess. Propel your performance to new heights with Peblz, designed to bolster strength and agility.<\/p>"
+          }
+        },
+        "faq_QjAUxP": {
+          "type": "faq",
+          "settings": {
+            "quiz": "Top Tips for Maximizing Your Foot Strengthening Routine?",
+            "answer": "<p>Propel your performance to new heights with Peblz, designed to bolster strength and agility. Whether you're sprinting, jumping, or maneuvering on the field, Peblz are your essential companion for achieving peak athletic prowess. Propel your performance to new heights with Peblz, designed to bolster strength and agility.<\/p>"
+          }
+        },
+        "tips_kADy4V": {
+          "type": "tips",
+          "settings": {
+            "heading": "Unlocking the Benefits of Natural Cork in Fitness",
+            "poster": "shopify:\/\/shop_images\/tip-expert-video.png",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/325ac7ed5fc54660a0781a3b51d4d834.mp4"
+          }
+        },
+        "tips_dptmi3": {
+          "type": "tips",
+          "settings": {
+            "heading": "Unlocking the Benefits of Natural Cork in Fitness",
+            "poster": "shopify:\/\/shop_images\/tip-expert-video.png",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/325ac7ed5fc54660a0781a3b51d4d834.mp4"
+          }
+        },
+        "tips_gcFrxD": {
+          "type": "tips",
+          "settings": {
+            "heading": "Unlocking the Benefits of Natural Cork in Fitness",
+            "poster": "shopify:\/\/shop_images\/tip-expert-video.png",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/325ac7ed5fc54660a0781a3b51d4d834.mp4"
+          }
+        },
+        "tips_XND4Hk": {
+          "type": "tips",
+          "settings": {
+            "heading": "Unlocking the Benefits of Natural Cork in Fitness",
+            "poster": "shopify:\/\/shop_images\/tip-expert-video.png",
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/325ac7ed5fc54660a0781a3b51d4d834.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "faq_kjbfdT",
+        "faq_7gwkkk",
+        "faq_imFnmB",
+        "faq_mR64cK",
+        "faq_QjAUxP",
+        "tips_kADy4V",
+        "tips_dptmi3",
+        "tips_gcFrxD",
+        "tips_XND4Hk"
+      ],
       "settings": {
-        "color_scheme": "",
+        "faq_heading": "Frequently Asked <span>Questions<\/span>",
+        "faq_button_text": "get your peblz",
+        "faq_button_url": "",
+        "team_heading": "Tips from <span>Experts<\/span>",
+        "team_text": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today.",
         "padding_top": 100,
         "padding_bottom": 100
       }

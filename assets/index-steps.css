@@ -1,149 +1,303 @@
 .step-text-header {
-    text-align: center;
+  text-align: center;
 }
 
 .step-text-header * {
-    margin: 0;
+  margin: 0;
 }
 
 .steps-subheading {
-    margin-bottom: 1.2rem;
-    line-height: 21.24px;
-    text-transform: uppercase;
-    color: var(--color-red-anchor);
+  margin-bottom: 1.2rem;
+  line-height: 21.24px;
+  text-transform: uppercase;
+  color: var(--color-red-anchor);
 }
 
 .step-guide-container {
-    margin-top: 4.8rem;
+  margin-top: 4.8rem;
 }
 
 .step-text-title {
-    text-transform: uppercase;
-    line-height: 49.56px;
-    margin-bottom: 1.6rem;
-    color: var(--color-h2-heading)
+  text-transform: uppercase;
+  line-height: 49.56px;
+  margin-bottom: 1.6rem;
+  color: var(--color-h2-heading);
 }
 
 .step-description {
-    line-height: 24px;
+  line-height: 24px;
 }
 
 .owl-carousel-container {
-    position: relative;
+  position: relative;
 }
 
 .step-guide-container .slide-counter {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5);
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 14px;
 }
 
 .step-guide-container .owl-carousel .item {
-    background: #fff;
-    border-radius: 10px;
-    border: 1px solid #FFD1C2;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #ffd1c2;
 }
 
 .step-guide-container .owl-carousel .slide-content {
-    padding: 6.4rem 8rem 6.5rem 4.8rem;
-    justify-content: space-between;
-    align-items: center;
+  padding: 6.4rem 8rem 6.5rem 4.8rem;
+  justify-content: space-between;
+  align-items: center;
 }
 
 /* Custom dots as a line */
 .step-guide-container .owl-dots {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .step-guide-container .owl-carousel button.owl-dot {
-    height: 2px;
-    width: 20px;
-    background: #D0D0D1;
-    transition: background 0.3s ease;
+  height: 2px;
+  width: 20px;
+  background: #d0d0d1;
+  transition: background 0.3s ease;
 }
 
 .step-guide-container .owl-carousel button.owl-dot.active {
-    background: var(--color-red-anchor);
+  background: var(--color-red-anchor);
 }
 
 .step-guide-container .owl-carousel .item .slide-text img {
-    width: 6.6rem;
-    height: 6.6rem;
+  width: 6.6rem;
+  height: 6.6rem;
 }
 
 .slide-text * {
-    margin: 0;
+  margin: 0;
 }
 
 .slide-text > img {
-    margin-bottom: 2rem;
+  margin-bottom: 2rem;
 }
 
 .slide-text h3 {
-    margin-bottom: 2.4rem;
-    text-transform: uppercase;
-    color: var(--color-h2-heading);
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+  color: var(--color-h2-heading);
 }
 
-
 .richtext-content {
-    margin-bottom: 4rem;
+  margin-bottom: 4rem;
 }
 
 .slide-image {
-    padding-left: 3rem;
+  padding-left: 3rem;
 }
 
 .feet-thumbnails {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.8rem;
-    margin-bottom: 1.6rem;
-    cursor: pointer;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.8rem;
+  margin-bottom: 1.6rem;
+  cursor: pointer;
 }
 
 .richtext-content h4 {
-    color: var(--color-red-anchor);
-    text-transform: uppercase;
-    margin-bottom: 4rem;
+  color: var(--color-red-anchor);
+  text-transform: uppercase;
+  margin-bottom: 4rem;
 }
 
 .step-wraper {
-    position: relative;
+  position: relative;
 }
 
 .step-wraper::before {
-    content: '';
-    position: absolute;
-    background-image: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/circle-step-before.png');
-    top: 0;
-    right: 90px;
-    background-repeat: no-repeat;
-    width: 310px;
-    height: 305px;
-    background-position: top;
-    background-size: contain;
-    overflow: hidden;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/circle-step-before.png");
+  top: 0;
+  right: 90px;
+  background-repeat: no-repeat;
+  width: 310px;
+  height: 305px;
+  background-position: top;
+  background-size: contain;
+  overflow: hidden;
+  z-index: 0;
 }
 .step-wraper::after {
-    content: '';
-    position: absolute;
-    background-image: url('https://cdn.shopify.com/s/files/1/0658/9733/2918/files/union-step-after.png');
-    bottom: 0;
-    left: 70px;
-    background-repeat: no-repeat;
-    width: 338px;
-    height: 298px;
-    background-position: top;
-    background-size: contain;
-    overflow: hidden;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/union-step-after.png");
+  bottom: 0;
+  left: 70px;
+  background-repeat: no-repeat;
+  width: 338px;
+  height: 298px;
+  background-position: top;
+  background-size: contain;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.custom-audio-player {
+  display: flex;
+  align-items: center;
+  border: 2px solid #f36f3b;
+  border-radius: 30px;
+  padding: 10px;
+  width: 300px;
+  background-color: #fff;
+}
+
+.play-btn {
+  background-color: #f36f3b;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.play-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.audio-waveform {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  width: 100%;
+  height: 40px;
+  background: url("gray-wave-background.png") no-repeat center center; /* Gray background wave image */
+  background-size: cover;
+  overflow: hidden;
+}
+
+.wave-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wave-progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+}
+.wave-background {
+  background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/audio-wave.png?v=1724334976");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.wave-progress {
+  display: block !important;
+  background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/progress-wave.png?v=1724335693");
+  background-repeat: no-repeat;
+  background-position: left;
+}
+.play-btn img {
+  filter: brightness(0) saturate(100%) invert(95%) sepia(100%) saturate(1%)
+    hue-rotate(145deg) brightness(104%) contrast(100%);
+}
+.play-btn img {
+  height: auto !important;
+  width: auto !important;
+}
+.step-guide-container .slide-counter {
+  bottom: -65px;
+  width: 150px;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.step-wraper:before {
+  right: 0px;
+  background-position: top right;
+}
+
+.step-wraper .page-width {
+  padding: 0;
+}
+.step-wraper:after {
+  background-position: bottom left;
+  left: 0px;
+}
+.step-guide-container .owl-carousel .slide-content {
+  padding: 20px 30px;
+}
+
+.slide-text h3 {
+  font-size: 26px;
+}
+
+.richtext-content h4 {
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 1199px) {
+  .step-guide-container .owl-carousel .slide-content {
+    padding: 20px 30px;
+  }
+
+  .slide-text h3 {
+    font-size: 26px;
+  }
+
+  .richtext-content h4 {
+    margin-bottom: 25px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .step-text-header {
+    padding: 0px 20px;
+  }
+
+  .step-guide-container .owl-nav {
+    transform: translate(30%);
+  }
+
+  .step-text-title {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .step-guide-container .owl-carousel .slide-content {
+    padding: 20px;
+  }
+
+  .slide-text h3 {
+    font-size: 20px;
+  }
+
+  .custom-audio-player {
+    width: auto;
+  }
+
+  .owl-carousel .owl-item img {
+    height: auto;
+  }
+
+  .step-text-title {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+  .step-guide-container .owl-nav {
+    transform: translate(80%);
+  }
 }

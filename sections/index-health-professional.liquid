@@ -1,4 +1,4 @@
-{% comment %} {{ 'index-health-professional.css' | asset_url | stylesheet_tag }} {% endcomment %}
+{{ 'index-health-professional.css' | asset_url | stylesheet_tag }} 
 <script src="{{ 'index-health-professional.js' | asset_url }}" type="text/javascript" defer></script>
 {%- style -%}
     .section-{{ section.id }}-padding {
@@ -14,106 +14,49 @@
     }
   {%- endstyle -%}
 
-  <style>
-    <style>
-body {font-family: Arial;}
-
-/* Style the tab */
-.tab {
-  overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
-}
-
-/* Style the buttons inside the tab */
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-  font-size: 17px;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-  background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-  background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
-}
-</style>
-  </style>
+ 
 
 <section class="color-{{ section.settings.color_scheme }} section-{{ section.id }}-padding health-professional-wapper">
   <div class="page-width">
     <div class="health-professional-inner">
-            {% if section.blocks.size > 0 %}
-               <div class="health-tab-wrapper">
+        {% if section.blocks.size > 0 %}
+            <div class="health-tab-wrapper {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                 <div class="tab">
-                    <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">London</button>
-                    <button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>
-                    <button class="tablinks" onclick="openCity(event, 'Tokyo')">Tokyo</button>
+                    {% for block in section.blocks %}
+                        {% case block.type %}
+                            {% when 'item' %}
+                                    {% if block.settings.heading != blank %} 
+                                        {% assign heading_title = block.settings.heading | handleize %}
+                                        <button  class="tablinks {% if forloop.first %}active {% endif %}" onmouseover="openTab(event, '{{ heading_title }}')" {% if forloop.first %}id="defaultOpen" {% endif %}> {{ block.settings.heading }} </button>
+                                    {% endif %}
+                        {% endcase %}
+                    {% endfor %}
                 </div>
 
-                    <div id="London" class="tabcontent">
-                    <h3>London</h3>
-                    <p>London is the capital city of England.</p>
-                    </div>
-
-                    <div id="Paris" class="tabcontent">
-                    <h3>Paris</h3>
-                    <p>Paris is the capital of France.</p> 
-                    </div>
-
-                    <div id="Tokyo" class="tabcontent">
-                    <h3>Tokyo</h3>
-                    <p>Tokyo is the capital of Japan.</p>
-                    </div>
-               </div>
-                {% comment %} <div class="about-items-list">
-                    <div class="accordion-faq-wrap">
-                        {% for block in section.blocks %}
-                            {% case block.type %}
-                                {% when 'item' %}
-                                    {% if block.settings.heading != blank %}                                        
-                                        <div class="item-faq-wrapper">
-                                                <button class="accordion-faqs"> <h3 class="professional-title">{{ block.settings.heading }}</h3> </button>
-                                            <div class="panel-faqs">
-                                                <div class="health-panel-inner">
-                                                    <div class="health-panel-image">
-                                                       <div class="health-panel-image-inner">
-                                                        {% render 'image-np', image: block.settings.image, srcset: true, sizes: true, width: 321, height: 380, lazy_load: true %}
-                                                       </div>
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'item' %}
+                                {% if block.settings.heading != blank %} 
+                                    {% assign heading_title = block.settings.heading | handleize %}
+                                    <div id="{{ heading_title }}" class="tabcontent" {% if forloop.first %}style="display: block;" {% endif %}>
+                                        <div class="content-wrapper">
+                                            <div class="athletes-img {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                                                {% render 'image-np', image: block.settings.image, imageURL: true, srcset: true, sizes: true, width: 300, height: 355, lazy_load: true %}
+                                            </div>
+                                            <div class="tab-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                                                    <div class="alhelete-icon">
+                                                        {% render 'image-np', image: block.settings.icon, imageURL: true, srcset: true, sizes: true, width: 80, height: 80, lazy_load: true %} 
                                                     </div>
-                                                    <div class="health-panel-content"> 
-                                                        {% render 'image-np', image: block.settings.icon, srcset: true, sizes: true, width: 80, height: 80, lazy_load: true %}                                                           
-                                                        {{ block.settings.text }}
-                                                        <div class="health-panel-btn">
-                                                            {% render 'anchor', button_text: block.settings.button_text, button_url: block.settings.button_url, class: 'custom-site-btn btn-black btn-green' %}
-                                                    </div>
-                                                    </div>
-                                                </div>
+                                                    <p class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">{{ block.settings.text }}</p>
+                                                    {% render 'anchor', button_text: block.settings.button_text, button_url: block.settings.button_url, class: 'custom-site-btn btn-black btn-green' %}
                                             </div>
                                         </div>
-                                    {% endif %}
-                            {% endcase %}
-                        {% endfor %}
-                    </div>
-                </div> {% endcomment %}
-            {% endif %}    
+                                    </div>
+                                {% endif %}
+                    {% endcase %}
+                {% endfor %}
+            </div>
+        {% endif %}    
     </div>
   </div>
 </section>

@@ -1,5 +1,6 @@
 {{ 'index-steps.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'selectedFoot.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'index-steps-audio.js' | asset_url }}" defer="defer"></script>
 {%- style -%}
     .section-{{ section.id }}-padding {
       padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
@@ -39,20 +40,36 @@
                                     <div class="grid grid--2-col grid--1-col-tablet-down slide-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                         <div class="grid__item slide-text">
                                             <div class="feet-thumbnails">
-                                                <div data-thumbnail="left" class="thumbnail-foot left-foot-thumbnail foot-thumbnail-active">
+                                                <div data-thumbnail="left" class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} thumbnail-foot left-foot-thumbnail foot-thumbnail-active">
                                                     {% render 'image', image: block.settings.left_thumb_image, srcset: true, sizes: true, width: 66, height: 66, lazy_load: true %}
                                                 </div>
-                                                <div data-thumbnail="right" class="thumbnail-foot right-foot-thumbnail">
+                                                <div data-thumbnail="right" class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} thumbnail-foot right-foot-thumbnail">
                                                     {% render 'image', image: block.settings.right_thumb_image, srcset: true, sizes: true, width: 66, height: 66, lazy_load: true %}
                                                 </div>
                                             </div>
                                             <div class="richtext-content left-foot-content {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                                 {{ block.settings.left_text }}
                                             </div>
-                                            <div class="richtext-content right-foot-content hidden">
+                                            <div class="{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %} richtext-content right-foot-content hidden">
                                                 {{ block.settings.right_text }}
                                             </div>
-                                            {% render 'anchor', button_text: section.settings.button_text, button_url: section.settings.button_url, class: 'custom-site-btn btn-white btn-green' %}
+                                            {% if block.settings.audio_url != blank %}                                                
+                                                <div class="feet-thumbnails-audio {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
+                                                  <div class="custom-audio-player">
+                                                        <button id="play-pause-btn" class="play-btn">
+                                                            {% render 'image-np', image: 'play-icon-audio.png', srcset: false, assetURL: true, sizes: false, lazy_load: false, alt: 'Play' %}
+                                                        </button>
+                                                        <div class="audio-waveform">
+                                                            <div class="wave-background">
+                                                            <!-- Gray background waveform (image) -->
+                                                            </div>
+                                                            <div class="wave-progress"></div>
+                                                        </div>
+                                                        <audio id="audio" src="{{ block.settings.audio_url }}"></audio>
+                                                    </div>
+                                                </div>
+                                            {% endif %}
+                                            
                                         </div>
                                         <div class="grid__item slide-image {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                             <div class="left-foot-image">
@@ -76,7 +93,6 @@
     </div>
 </section>
 
-
 {% schema %}
     {
         "name": "Step Guide",
@@ -98,21 +114,6 @@
                 "id": "text",
                 "label": "Text",
                 "default": "The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps."
-            },
-            {
-                "type": "header",
-                "content": "Buttons"
-            },
-            {
-                "type": "text",
-                "id": "button_text",
-                "label": "Button Text",
-                "default": "See Complete Guide"
-            },
-            {
-                "type": "url",
-                "id": "button_url",
-                "label": "Button URL"
             },
             {
                 "type": "header",
@@ -181,6 +182,11 @@
                         "type": "image_picker",
                         "id": "right_thumb_image",
                         "label": "Thumbnail Image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "audio_url",
+                        "label": "Audio URL"
                     }
                 ]
             }

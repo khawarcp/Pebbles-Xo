@@ -1,112 +1,188 @@
 .banner-wrapper {
-    min-height: calc(100vh - 86px);
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    padding-top: 6rem;
-    padding-bottom: 4rem;
+  min-height: calc(100vh - 86px);
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 4rem;
 }
 
-.banner-description{
-    font-size: 1.8rem;
-    line-height: 2.88rem;
-    color: #F8F8F8;
-    max-width: 46.9rem;
-    margin: 0 0 3.2rem;
+.banner-description {
+  font-size: 1.8rem;
+  line-height: 2.88rem;
+  color: #f8f8f8;
+  max-width: 46.9rem;
+  margin: 0 0 3.2rem;
 }
 
 .banner-title {
-    line-height: 66.08px;
-    margin: 0;
-    text-transform: uppercase;
-    margin-bottom: 1.6rem;
+  line-height: 66.08px;
+  margin: 0;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
 }
 
 .banner-image img {
-    width: 428px;
-    position: relative;
-    z-index: 2;
-    margin: 0 auto;
+  width: 428px;
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
 }
 
 .banner-image {
-    position: relative;
+  position: relative;
 }
 
 .banner-image::after {
-    content: '';
-    position: absolute;
-    top: -20%;
-    left: 30%;
-    background-image: url(https://cdn.shopify.com/s/files/1/0658/9733/2918/files/pebble-background-circle.png);
-    height: 459px;
-    width: 270px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 0;
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 30%;
+  background-image: url(https://cdn.shopify.com/s/files/1/0658/9733/2918/files/pebble-background-circle.png);
+  height: 459px;
+  width: 270px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
 }
 
-
 .spin-text {
-    position: absolute;
-    bottom: -30%;
-    left: 30%;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #3e3844;
-    border-radius: 2rem;
-    margin: 0;
-    padding: .7rem 1.3rem;
-    gap: 6px;
-    text-transform: uppercase;
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 14.58px;
-    letter-spacing: 1.5px;
-    color: #D0D0D1;
+  position: absolute;
+  bottom: -30%;
+  left: 30%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3e3844;
+  border-radius: 2rem;
+  margin: 0;
+  padding: 0.7rem 1.3rem;
+  gap: 6px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 14.58px;
+  letter-spacing: 1.5px;
+  color: #d0d0d1;
 }
 
 .scroll-down {
-    position: absolute;
-    bottom: 5%;
-    text-align: center;
-    text-transform: uppercase;
+  position: absolute;
+  bottom: 5%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .scroll-down p {
-    margin: 0;
-    font-size: 1.2rem;
-    line-height: 14.58px;
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 14.58px;
 }
 
-.scroll-down a{
-    color: #D0D0D1;
-    text-decoration: none;
+.scroll-down a {
+  color: #d0d0d1;
+  text-decoration: none;
 }
-
 
 .scroll-rect {
-    --animation-duration: 1.5s;
-    transform-origin: 50% 50%;
-    animation: nc-loop-mouse-anim var(--animation-duration) infinite;
+  --animation-duration: 1.5s;
+  transform-origin: 50% 50%;
+  animation: nc-loop-mouse-anim var(--animation-duration) infinite;
 }
 @keyframes nc-loop-mouse-anim {
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(30%);
-    }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30%);
+  }
 }
 
-
 @media screen and (min-width: 1920px) {
-    .banner-wrapper {
-        min-height: 72rem;
-    }
+  .banner-wrapper {
+    min-height: 72rem;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .banner-wrapper {
+    min-height: 600px;
+  }
+}
+@media screen and (max-width: 1199px) {
+  h1.banner-title {
+    font-size: 42px;
+    line-height: 1.4;
+  }
+
+  .banner-image:after {
+    left: 20%;
+  }
+
+  .spin-text {
+    left: 20%;
+  }
+
+  .banner-description {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .banner-image:after {
+    display: none;
+  }
+
+  p.spin-text {
+    bottom: 0px;
+    left: 30%;
+  }
+
+  .scroll-down {
+    bottom: 30px;
+  }
+
+  .banner-wrapper {
+    padding-bottom: 100px;
+  }
+
+  .banner-image img {
+    margin: 0 auto 60px;
+  }
+}
+@media screen and (max-width: 767px) {
+  sticky-header.header-wrapper.header-wrapper--border-bottom {
+    padding: 0px 10px;
+  }
+
+  header {
+    padding: 10px 20px !important;
+  }
+
+  h1.banner-title {
+    font-size: 30px;
+  }
+
+  span.btn-text {
+    font-size: 14px;
+  }
+
+  .banner-text-content {
+    margin-bottom: 24px;
+  }
+
+  p.spin-text {
+    left: 0px;
+    right: 0px;
+    width: max-content;
+    margin: 0px auto;
+  }
+
+  .scroll-down {
+    left: 0px;
+    right: 0px;
+  }
 }

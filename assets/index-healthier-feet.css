@@ -1,65 +1,109 @@
 .feature-items {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 3.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
 }
 
 .healthier-feet-wapper .section-text-header {
-    max-width: 640px;
-    margin: 0 auto;
+  max-width: 640px;
+  margin: 0 auto;
 }
 
 .features-wapper {
-    margin: 4.8rem 0;
+  margin: 4.8rem 0;
 }
 
 .feature-item {
-    background-color: #2f2936;
-    padding: 1.2rem;
-    border-radius: 1.6rem;
-    width: calc(100% / 4);
-    min-height: 33rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  background-color: #2f2936;
+  padding: 1.2rem;
+  border-radius: 1.6rem;
+  width: calc(100% / 4);
+  min-height: 33rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .feature-image img {
-    border-radius: 1.6rem;
-    object-fit: cover;
-    width: 100%;
+  border-radius: 1.6rem;
+  object-fit: cover;
+  width: 100%;
 }
 
 .feature-image {
-    margin-bottom: 2.4rem;
+  margin-bottom: 2.4rem;
 }
 
 .fearure-content h3 {
-    margin: 0;
-    font-size: 2rem;
-    line-height: 1.956rem;
-    text-transform: uppercase;
-    margin-bottom: 1.2rem;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.956rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
 }
 
 .fearure-content p {
-    margin: 0;
-    line-height: 2.24rem;
-    color: #E6E6E7;
+  margin: 0;
+  line-height: 2.24rem;
+  color: #e6e6e7;
 }
 
 .fearure-content {
-    padding: 0 1.2rem 1.2rem;
+  padding: 0 1.2rem 1.2rem;
 }
 
 .healthier-feet-wapper .section-description {
-    margin-bottom: 0;
-    color: var(--desc-color);
-    font-size: 1.5rem;
-    line-height: 2.24rem;
+  margin-bottom: 0;
+  color: var(--desc-color);
+  font-size: 1.5rem;
+  line-height: 2.24rem;
 }
 
 .healthier-feet-wapper .section-text-title {
-    margin: 0 0 1.6rem;    
+  margin: 0 0 1.6rem;
+}
+
+@media screen and (max-width: 1199px) {
+  .feature-items {
+    gap: 10px;
+  }
+
+  .fearure-content {
+    padding: 0;
+  }
+
+  .feature-image {
+    margin-bottom: 20px;
+  }
+
+  .feature-item {
+    min-height: auto;
+  }
+
+  .fearure-content h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .feature-item {
+    width: 49%;
+    min-height: 315px;
+    justify-content: flex-start;
+  }
+
+  .feature-items {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  h2,
+  .h2 {
+    font-size: 28px;
+  }
+
+  .feature-item {
+    width: 100%;
+  }
 }

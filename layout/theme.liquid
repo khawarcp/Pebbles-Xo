@@ -267,6 +267,7 @@
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
     {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
+    {{ 'jquery.fancybox.min.css' | asset_url | stylesheet_tag }}
     {{ 'custom-color.css' | asset_url | stylesheet_tag }}
     {% if settings.use_custom_heading  %}
     {{ 'custom-fonts.css' | asset_url | stylesheet_tag }}
@@ -391,39 +392,7 @@
 
     <script src="{{ 'jquery.min.js' | asset_url }}" > </script>
     <script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
-    <script defer="defer">
-    $(document).ready(function(){
-        const step_slide = $("#step-guide");
-
-        // Initialize Owl Carousel
-        step_slide.owlCarousel({
-          items: 1,
-          loop: true,
-          nav: true,
-          dots: true,
-          margin: 32,
-          autoplay: false,
-          autoplayTimeout: 5000,
-          navText : ["<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/prev-arrow.svg' alt='previous-icon' width='24' height='24'>","<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/next-arrow.svg' alt='previous-icon' width='24' height='24'>"],
-          autoplayHoverPause: true,
-          stagePadding: 200, // Show portion of previous and next slides
-          onInitialized: updateCounter, // Update counter on initialization
-          onTranslated: updateCounter   // Update counter on translation
-        });
-
-        // Update the slide counter
-        function updateCounter(event) {
-          let currentSlide = event.item.index - event.relatedTarget._clones.length / 2 + 1;
-          let totalSlides = event.item.count;
-          if (currentSlide > totalSlides) {
-              currentSlide = currentSlide - totalSlides;
-          } else if (currentSlide <= 0) {
-              currentSlide = totalSlides + currentSlide;
-          }
-          $('.current-slide').text(currentSlide);
-          $('.total-slides').text(totalSlides);         
-        }
-      });
-    </script>
+    <script src="{{ 'index-owl-carousel-scripts.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'jquery.fancybox.min.js' | asset_url }}" defer="defer"></script>
   </body>
 </html>
