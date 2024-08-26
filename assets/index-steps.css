@@ -31,7 +31,23 @@
 .owl-carousel-container {
   position: relative;
 }
+.current-slide-step {
+  color: var(--color-red-anchor);
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 
+.total-slides-step {
+  color: var(--custom-body-color);
+  text-align: right;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
 .step-guide-container .slide-counter {
   position: absolute;
   bottom: 10px;
@@ -222,7 +238,7 @@
   width: auto !important;
 }
 .step-guide-container .slide-counter {
-  bottom: -65px;
+  bottom: -61px;
   width: 150px;
   justify-content: space-between;
   background-color: transparent;

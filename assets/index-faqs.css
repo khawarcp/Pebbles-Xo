@@ -31,6 +31,7 @@
   margin: 0;
   display: flex;
   justify-content: space-between;
+  font-family: 'Cabin', sans-serif;
 }
 
 .accordian-tabs.faqs-accordian-tabs {
@@ -177,7 +178,7 @@ font-family: Cabin;
   transform: translate(-50%);
   display: flex;
   align-items: center;
-  bottom: 47px;
+  bottom: -17%;
 }
 
 .slide-counter button.owl-dot {
@@ -192,21 +193,18 @@ font-family: Cabin;
   background: var(--color-red-anchor);
 }
 
-span.current-slide {
-  color: #ff6e3d;
-  color: var(--main-colors-ff-8-d-67, #ff6e3d);
+.current-slide {
+  color: var(--color-red-anchor);
   text-align: right;
-  font-family: Cabin;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
 
-span.total-slides {
-  color: var(--Main-Colors-Black, #030303);
+.total-slides {
+  color: var(--custom-body-color);
   text-align: right;
-  font-family: Cabin;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -215,7 +213,7 @@ span.total-slides {
 .fancybox-bg {
   display: block !important;
 }
-span.play-icon {
+.play-icon {
   background-image: url("https://cdn.shopify.com/s/files/1/0658/9733/2918/files/play-icon.svg?v=1724325748");
   background-repeat: no-repeat;
   background-position: center;

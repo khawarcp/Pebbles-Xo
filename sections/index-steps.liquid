@@ -56,8 +56,8 @@
                                             {% if block.settings.audio_url != blank %}                                                
                                                 <div class="feet-thumbnails-audio {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
                                                   <div class="custom-audio-player">
-                                                        <button id="play-pause-btn" class="play-btn">
-                                                            {% render 'image-np', image: 'play-icon-audio.png', srcset: false, assetURL: true, sizes: false, lazy_load: false, alt: 'Play' %}
+                                                        <button id="play-pause-btn" class="play-pause-btn-audio play-btn">
+                                                            {% render 'image-np', image: 'play-icon-audio.png', srcset: false, assetURL: true, sizes: false, lazy_load: false, alt: 'Play' class: 'play-icon-audio' %}
                                                         </button>
                                                         <div class="audio-waveform">
                                                             <div class="wave-background">
@@ -65,7 +65,7 @@
                                                             </div>
                                                             <div class="wave-progress"></div>
                                                         </div>
-                                                        <audio id="audio" src="{{ block.settings.audio_url }}"></audio>
+                                                        <audio id="audio" class="audio" src="{{ block.settings.audio_url }}"></audio>
                                                     </div>
                                                 </div>
                                             {% endif %}
@@ -84,9 +84,6 @@
                             {% endunless %}
                 {% endcase %}
             {% endfor %}
-        </div>
-        <div class="slide-counter">
-            <span class="current-slide">1</span> / <span class="total-slides">2</span>            
         </div>
         
     </div>

@@ -1,7 +1,7 @@
-// Homepage Steps owl carousel
+
 $(document).ready(function(){
+  // Homepage Steps owl carousel
     const step_slide = $("#step-guide");
-    // Initialize Owl Carousel
     step_slide.owlCarousel({
       items: 1,
       loop: true,
@@ -13,8 +13,8 @@ $(document).ready(function(){
       navText : ["<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/prev-arrow.svg' alt='previous-icon' width='24' height='24'>","<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/next-arrow.svg' alt='previous-icon' width='24' height='24'>"],
       autoplayHoverPause: true,
       stagePadding: 200, // Show portion of previous and next slides
-      onInitialized: updateCounter, // Update counter on initialization
-      onTranslated: updateCounter ,  // Update counter on translation
+      onInitialized: updateCounter,  // Call counter update on initialization
+      onChanged: updateCounter,      // Call counter update on slide change
       responsive:{
     0:{
         items:1,
@@ -35,22 +35,35 @@ $(document).ready(function(){
     
     // Update the slide counter
     function updateCounter(event) {
-      let currentSlide = event.item.index - event.relatedTarget._clones.length / 2 + 1;
-      let totalSlides = event.item.count;
-      if (currentSlide > totalSlides) {
-          currentSlide = currentSlide - totalSlides;
-      } else if (currentSlide <= 0) {
-          currentSlide = totalSlides + currentSlide;
-      }
-      $('.current-slide').text(currentSlide);
-      $('.total-slides').text(totalSlides);         
+      let currentSlide = (event.item.index - event.relatedTarget._clones.length / 2) % event.item.count + 1;
+      let totalSlides = event.page.count;
+  
+      // Format numbers with leading zero
+      $('.current-slide-step').text(('0' + currentSlide).slice(-2));
+      $('.total-slides-step').text(('0' + totalSlides).slice(-2));
     }
+  
+    // Initialize the counter container
+    let counterHtmlStep = `
+      <div class="slide-counter">
+        <span class="current-slide-step">01</span>
+        <div class="dot-navigation-step"></div>
+        <span class="total-slides-step">05</span>
+      </div>
+    `;
+    
+    // Append the counter container after the carousel
+    $('#step-guide').append(counterHtmlStep);
+    
+    // Move the owl dots into the custom dot-navigation container
+    $('#step-guide .owl-dots').appendTo('.dot-navigation-step');
   });
 
+
   $(document).ready(function(){
-    var owl = $('.tips-from-expert-slider .owl-carousel');
+    const tips_expert = $('.tips-from-expert-slider .owl-carousel');
     
-    owl.owlCarousel({
+    tips_expert.owlCarousel({
       loop:true,
       margin:16,
       nav:true,
@@ -76,8 +89,8 @@ $(document).ready(function(){
     });
   
     function updateSliderCounter(event) {
-      var currentSlide = (event.item.index - event.relatedTarget._clones.length / 2) % event.item.count + 1;
-      var totalSlides = event.page.count;
+      let currentSlide = (event.item.index - event.relatedTarget._clones.length / 2) % event.item.count + 1;
+      let totalSlides = event.page.count;
   
       // Format numbers with leading zero
       $('.current-slide').text(('0' + currentSlide).slice(-2));
@@ -85,7 +98,7 @@ $(document).ready(function(){
     }
   
     // Initialize the counter container
-    var counterHtml = `
+    let counterHtml = `
       <div class="slide-counter">
         <span class="current-slide">01</span>
         <div class="dot-navigation"></div>
