@@ -68,3 +68,9 @@
 .origin-wapper {
   display: block;
 }
+
+@media screen and (max-width: 767px) {
+  .origin-wapper {
+    min-height: auto;
+  }
+}

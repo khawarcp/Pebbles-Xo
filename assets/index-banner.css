@@ -108,9 +108,15 @@
   }
 }
 
+@media screen and (max-width: 1440px) {
+  .banner-wrapper {
+    min-height: 100vh;
+  }
+}
 @media screen and (max-width: 1366px) {
   .banner-wrapper {
-    min-height: 600px;
+    min-height: calc(100vh - 86px);
+    padding-top: 0;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -120,7 +126,7 @@
   }
 
   .banner-image:after {
-    left: 20%;
+    left: 25%;
   }
 
   .spin-text {
@@ -130,6 +136,12 @@
   .banner-description {
     font-size: 16px;
   }
+
+  .banner-image::after {
+    top: -12%;
+    height: 389px;
+}
+
 }
 @media screen and (max-width: 991px) {
   .banner-image:after {

@@ -1,3 +1,14 @@
 .google-review-wapper {
   background-color: #fff;
 }
+
+
+.google-wrapper-inner .section-text-title{
+  color: var(--color-h2-heading);
+  margin-bottom: 1.6rem;
+}
+.google-wrapper-inner .section-description{
+  color: #5B5B5F;
+  max-width: 640px;
+    margin: 0 auto;
+}

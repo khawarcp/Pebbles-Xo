@@ -314,6 +314,9 @@
     line-height: 1.4;
   }
   .step-guide-container .owl-nav {
-    transform: translate(80%);
+    transform: translate(110%);
+  }
+  .custom-audio-player {
+    padding: 5px 10px;
   }
 }

@@ -1,8 +1,8 @@
 {{ 'index-image-text.css' |  asset_url | stylesheet_tag }}
 {%- style -%}
     .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-      padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+      padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
+      padding-bottom: {{ section.settings.padding_bottom | times: 0.5 | round: 0 }}px;
     }
   
     @media screen and (min-width: 750px) {
@@ -12,7 +12,7 @@
       }
     }
   {%- endstyle -%}
-<section class="section-{{ section.id }}-padding image-text-wraper">
+<section id="learn-excercise" class="section-{{ section.id }}-padding image-text-wraper">
     <div class="page-width">
         {% if section.settings.heading != blank %}            
             <div class="image-text-header {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">

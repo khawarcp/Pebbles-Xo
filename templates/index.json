@@ -13,7 +13,7 @@
         "button_url_2": "",
         "spin_text": "Drag to view 360 spin of Pebble",
         "show_navigator": true,
-        "scroll_url": "",
+        "scroll_url": "#learn-excercise",
         "scroll_text": "Scroll Down"
       }
     },
@@ -295,6 +295,24 @@
     },
     "index_google_reviews_YQKE4R": {
       "type": "index-google-reviews",
+      "blocks": {
+        "heading_qaG3mj": {
+          "type": "heading",
+          "settings": {
+            "heading": "Read Why Everyone <span>Loves<\/span> PEBLZ!"
+          }
+        },
+        "text_Nt6zQh": {
+          "type": "text",
+          "settings": {
+            "text": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today."
+          }
+        }
+      },
+      "block_order": [
+        "heading_qaG3mj",
+        "text_Nt6zQh"
+      ],
       "settings": {
         "padding_top": 100,
         "padding_bottom": 100

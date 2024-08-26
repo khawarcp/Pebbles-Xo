@@ -279,7 +279,25 @@ font-family: Cabin;
   }
 
   .tips-from-expert-slider .owl-nav {
-    bottom: -32px;
+    bottom: -37px;
     transform: translate(74%);
   }
+  .slide-counter {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+    align-items: center;
+    bottom: -32px;
+}
+
+.faqs-content-row {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.tips-from-expert{
+  padding-top: 40px;
+}
+
 }

@@ -263,4 +263,7 @@
     padding-left: 0px;
     margin-top: 30px;
   }
+  .tabcontent{
+    padding-bottom: 0;
+  }
 }

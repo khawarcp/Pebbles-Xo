@@ -13,13 +13,34 @@
     }
   {%- endstyle -%}
 
+{% if section.blocks.size > 0 %}
 <section class="section-{{ section.id }}-padding google-review-wapper">
   <div class="page-width">
-      <div class="review-section-img">
-        <img src="https://cdn.shopify.com/s/files/1/0658/9733/2918/files/review-section-img.png?v=1724320309">
+      <div class="google-wrapper-inner">         
+          <div class="section-text-header">              
+              {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                  {%- when 'heading' -%}
+                    {% if block.settings.heading != blank %}                    
+                      <h2 class="section-text-title uppercase color-span {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ block.settings.heading }} </h2>
+                  {% endif %}
+                  {%- when 'text' -%}
+                    {% if block.settings.text != blank %}                    
+                    <p class="section-description {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"> {{ block.settings.text }} </p>
+                  {% endif %}  
+                {%- endcase -%}
+              {%- endfor -%}             
+          </div>
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when '@app' -%}
+              {% render block %}
+          {%- endcase -%}
+        {%- endfor -%}
       </div>
   </div>
 </section>
+{% endif %}
 
 {% schema %}
     {
@@ -49,6 +70,35 @@
                 "label": "t:sections.all.padding.padding_bottom",
                 "default": 100
             }
+        ],
+        "blocks": [
+          {
+            "type": "@app"
+          },
+          {
+            "type": "heading",
+            "name": "Heading",
+            "settings": [
+              {
+                  "type": "html",
+                  "id": "heading",
+                  "label": "Heading",
+                  "default": "Read Why Everyone <span>Loves</span> PEBLZ!"
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "name": "Text",
+            "settings": [
+              {
+                "type": "inline_richtext",
+                "id": "text",
+                "label": "Text",
+                "default": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today."
+              }
+            ]
+          }
         ],
         "presets": [
             {
