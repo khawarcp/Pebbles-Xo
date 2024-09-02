@@ -263,7 +263,7 @@
         }
       }
     {% endstyle %}
-
+     
     {{ 'base.css' | asset_url | stylesheet_tag }}
     {{ 'owl.carousel.min.css' | asset_url | stylesheet_tag }}
     {{ 'owl.theme.default.min.css' | asset_url | stylesheet_tag }}
@@ -315,7 +315,7 @@
     </script>
   </head>
 
-  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
+  <body class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %} {{  template }}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
       {{ 'accessibility.skip_to_text' | t }}
     </a>
@@ -390,9 +390,13 @@
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
 
-    <script src="{{ 'jquery.min.js' | asset_url }}" > </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <script src="{{ 'owl.carousel.min.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'index-owl-carousel-scripts.js' | asset_url }}" defer="defer"></script>
     <script src="{{ 'jquery.fancybox.min.js' | asset_url }}" defer="defer"></script>
+
+
+
   </body>
 </html>

@@ -106,4 +106,10 @@
   .feature-item {
     width: 100%;
   }
+  .feature-image img {
+    height: auto;
+  }
+  .feature-image img {
+    height: 220px;
+  }
 }

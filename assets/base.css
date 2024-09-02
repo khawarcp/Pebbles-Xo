@@ -3660,3 +3660,12 @@ sticky-header.header-wrapper.header-wrapper--border-bottom {
 .image-text-wraper h2.image-text-title {
   text-transform: uppercase;
 }
+.section-header.shopify-section-group-header-group {
+  background-color: #1d1624;
+}
+
+@media screen and (max-width: 767px) {
+  sticky-header.header-wrapper.header-wrapper--border-bottom {
+    padding: 0px 1rem;
+  }
+}

@@ -92,6 +92,16 @@
   transform-origin: 50% 50%;
   animation: nc-loop-mouse-anim var(--animation-duration) infinite;
 }
+.scroll-down p {
+  font-weight: 600;
+}
+.sirv-container {
+  padding-bottom: 20px;
+}
+.grid__item.banner-image {
+  min-height: 321px;
+}
+
 @keyframes nc-loop-mouse-anim {
   0%,
   100% {
@@ -101,7 +111,37 @@
     transform: translateY(30%);
   }
 }
+@media screen and (min-width: 1399px) {
+  .banner-image img {
+    height: 428.831px;
+    width: 601.785px;
+  }
 
+  .banner-image:after {
+    width: 329.323px;
+    height: 539px;
+    flex-shrink: 0;
+    top: -10%;
+  }
+
+  p.spin-text {
+    bottom: -125px;
+  }
+
+  .banner-wrapper {
+    min-height: 729px !important;
+    flex-shrink: 0;
+    padding: 0;
+  }
+
+  .grid.grid--2-col.grid--1-col-tablet-down.banner-content {
+    align-items: center;
+  }
+  .banner-image:after {
+    width: 300px;
+    height: 400px;
+  }
+}
 @media screen and (min-width: 1920px) {
   .banner-wrapper {
     min-height: 72rem;
@@ -112,11 +152,38 @@
   .banner-wrapper {
     min-height: 100vh;
   }
+  p.spin-text {
+    bottom: -170px;
+    left: 28%;
+  }
 }
 @media screen and (max-width: 1366px) {
   .banner-wrapper {
-    min-height: calc(100vh - 86px);
+    min-height: calc(113vh - 86px);
     padding-top: 0;
+  }
+  .banner-image img {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  .banner-image:after {
+    left: auto;
+    right: 20%;
+  }
+
+  .scroll-down {
+    bottom: 20px;
+  }
+
+  p.spin-text {
+    left: auto;
+    right: 24%;
+    bottom: -52px;
+  }
+  .banner-image:after {
+    width: 300px;
+    height: 400px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -140,8 +207,15 @@
   .banner-image::after {
     top: -12%;
     height: 389px;
-}
+  }
+  .banner-wrapper {
+    min-height: 620px;
+  }
 
+  p.spin-text {
+    bottom: -97px;
+    right: 53px;
+  }
 }
 @media screen and (max-width: 991px) {
   .banner-image:after {
@@ -164,12 +238,34 @@
   .banner-image img {
     margin: 0 auto 60px;
   }
-}
-@media screen and (max-width: 767px) {
-  sticky-header.header-wrapper.header-wrapper--border-bottom {
-    padding: 0px 10px;
+  .banner-image img {
+    width: 100%;
+    height: auto;
   }
 
+  p.spin-text {
+    left: 0px;
+    right: 0px;
+    width: max-content;
+    margin: auto;
+  }
+
+  .scroll-down {
+    left: 0px;
+    right: 0px;
+  }
+  .banner-wrapper {
+    padding-top: 50px;
+  }
+  .banner-image img img {
+    width: 80%;
+    max-width: 80%;
+    margin: auto;
+    height: 80%;
+    object-fit: contain;
+  }
+}
+@media screen and (max-width: 767px) {
   header {
     padding: 10px 20px !important;
   }
@@ -196,5 +292,8 @@
   .scroll-down {
     left: 0px;
     right: 0px;
+  }
+  .grid__item.banner-image {
+    padding-bottom: 40px;
   }
 }

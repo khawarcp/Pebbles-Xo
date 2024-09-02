@@ -68,7 +68,43 @@
 .origin-wapper {
   display: block;
 }
+@media screen and (min-width: 1440px) {
+  .origin-wapper {
+    border-top: 0px !important;
+    margin-top: -1px;
+  }
+  .origin-wrapper-inner .section-description {
+    color: var(--Neutral-Grey-02, #e6e6e7);
+    font-family: Cabin;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+  }
 
+  h3.origin-item-heading {
+    color: var(--main-colors-ff-8-d-67, #ff6e3d);
+    font-family: Cabin;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  p.origin-item-info {
+    color: var(--Neutral-Grey-02, #e6e6e7);
+    font-family: Cabin;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 22.5px */
+  }
+}
+@media screen and (max-width: 991px) {
+  .origin-wapper {
+    min-height: auto;
+  }
+}
 @media screen and (max-width: 767px) {
   .origin-wapper {
     min-height: auto;

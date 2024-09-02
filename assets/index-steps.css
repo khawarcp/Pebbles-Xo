@@ -266,6 +266,74 @@
 .richtext-content h4 {
   margin-bottom: 25px;
 }
+div#step-guide {
+  margin-bottom: 50px;
+}
+@media screen and (min-width: 1440px) {
+  .step-guide-container .owl-carousel .slide-content {
+    padding: 65px 48px;
+  }
+
+  .slide-text h3 {
+    color: var(--Main-Colors-Black, #030303);
+    font-family: Aldrich;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 118%; /* 37.76px */
+    text-transform: uppercase;
+  }
+  .richtext-content.right-foot-content,
+  .richtext-content.left-foot-content {
+    margin-bottom: 37px;
+  }
+
+  .slide-text h3 {
+    margin-bottom: 24px;
+  }
+  .richtext-content.right-foot-content,
+  .richtext-content.left-foot-content {
+    margin-bottom: 24px;
+    max-width: 400px;
+  }
+
+  .custom-audio-player {
+    width: 390px;
+  }
+  .right-foot-image img,
+  .left-foot-image img {
+    width: 360px !important;
+    height: 239px;
+    flex-shrink: 0;
+    object-fit: contain;
+    margin: auto;
+  }
+  .richtext-content.right-foot-content p,
+  .richtext-content.left-foot-content p {
+    color: var(--Neutral-Grey-06, #5b5b5f);
+    font-family: Cabin;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 36px */
+  }
+
+  .custom-audio-player {
+    width: 377px;
+    padding: 5px 8px;
+  }
+  .richtext-content h4 {
+    margin-bottom: 37px;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .step-guide-container .slide-counter {
+  }
+
+  .owl-nav {
+    left: 59%;
+  }
+}
 @media screen and (max-width: 1199px) {
   .step-guide-container .owl-carousel .slide-content {
     padding: 20px 30px;

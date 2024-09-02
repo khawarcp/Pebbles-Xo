@@ -194,6 +194,9 @@
     font-size: 14px;
     margin: 20px 0px;
   }
+  .feature-image img {
+    height: auto;
+  }
 }
 @media screen and (max-width: 991px) {
   .accordion-faqs .professional-title {
@@ -263,7 +266,7 @@
     padding-left: 0px;
     margin-top: 30px;
   }
-  .tabcontent{
+  .tabcontent {
     padding-bottom: 0;
   }
 }

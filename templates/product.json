@@ -64,10 +64,10 @@
       "settings": {
         "enable_sticky_info": true,
         "color_scheme": "scheme-1",
-        "media_size": "large",
+        "media_size": "medium",
         "constrain_to_viewport": true,
         "media_fit": "contain",
-        "gallery_layout": "stacked",
+        "gallery_layout": "thumbnail_slider",
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
@@ -94,10 +94,17 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "testing_360_7VFG9V": {
+      "type": "testing-360",
+      "disabled": true,
+      "settings": {
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "testing_360_7VFG9V"
   ]
 }

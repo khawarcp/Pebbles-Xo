@@ -42,7 +42,7 @@
       ],
       "settings": {
         "color_scheme": "scheme-4",
-        "footer_logo": "shopify:\/\/shop_images\/Pebbles-Xo-Logo.svg",
+        "footer_logo": "shopify:\/\/shop_images\/footer-logo.svg",
         "newsletter_enable": false,
         "newsletter_heading": "Subscribe to our emails",
         "enable_follow_on_shop": true,

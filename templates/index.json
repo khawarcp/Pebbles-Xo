@@ -10,7 +10,7 @@
         "button_text_1": "Learn The Exercises",
         "button_url_1": "",
         "button_text_2": "get your peblz",
-        "button_url_2": "",
+        "button_url_2": "shopify:\/\/products\/the-pebble-xo",
         "spin_text": "Drag to view 360 spin of Pebble",
         "show_navigator": true,
         "scroll_url": "#learn-excercise",
@@ -26,7 +26,7 @@
         "button_text_1": "Learn The Exercises",
         "button_url_1": "",
         "button_text_2": "get your peblz",
-        "button_url_2": "",
+        "button_url_2": "shopify:\/\/products\/the-pebble-xo",
         "padding_top": 100,
         "padding_bottom": 50
       }
@@ -103,8 +103,8 @@
         "slide_jwJbtG"
       ],
       "settings": {
-        "subheading": "Step-by-Step Peblz Exercises",
-        "heading": "The Plantar Foot and Calf <span>Stretch<\/span>",
+        "subheading": "",
+        "heading": "Step-by-Step Peblz <span>Exercises<\/span>",
         "text": "The Plantar Foot and Calf stretch- great for plantar fasciitis, runners and calf cramps.",
         "padding_top": 50,
         "padding_bottom": 100
@@ -118,7 +118,7 @@
           "settings": {
             "heading": "The Peak",
             "text": "Designed to apply pressure with precision",
-            "image": "shopify:\/\/shop_images\/peak.jpg"
+            "image": "shopify:\/\/shop_images\/The_peak.png"
           }
         },
         "item_Ufr4Di": {
@@ -126,7 +126,7 @@
           "settings": {
             "heading": "The slope",
             "text": "Mimics the natural arch of the foot",
-            "image": "shopify:\/\/shop_images\/slope.jpg"
+            "image": "shopify:\/\/shop_images\/The_slope.png"
           }
         },
         "item_4nTE4H": {
@@ -134,7 +134,7 @@
           "settings": {
             "heading": "The mound",
             "text": "Designed for a snug fit just in front of the heel",
-            "image": "shopify:\/\/shop_images\/mound.jpg"
+            "image": "shopify:\/\/shop_images\/The_mound.png"
           }
         },
         "item_p3Cg6U": {
@@ -142,7 +142,7 @@
           "settings": {
             "heading": "The cliff",
             "text": "Allows clearance to work toes individually",
-            "image": "shopify:\/\/shop_images\/cliff.jpg"
+            "image": "shopify:\/\/shop_images\/The_cliff.png"
           }
         }
       },
@@ -256,7 +256,7 @@
             "button_text": "Learn More",
             "button_url": "",
             "icon": "shopify:\/\/shop_images\/athelet-icon.png",
-            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+            "image": "shopify:\/\/shop_images\/althete-img_c5a034f9-9685-4bbb-afc8-215747d5e9cb.png"
           }
         },
         "item_Drk97q": {
@@ -267,7 +267,7 @@
             "button_text": "Learn More",
             "button_url": "",
             "icon": "shopify:\/\/shop_images\/athelet-icon.png",
-            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+            "image": "shopify:\/\/shop_images\/althete-img.png"
           }
         },
         "item_QdJPCU": {
@@ -278,7 +278,7 @@
             "button_text": "Learn More",
             "button_url": "",
             "icon": "shopify:\/\/shop_images\/athelet-icon.png",
-            "image": "shopify:\/\/shop_images\/athelet-image.jpg"
+            "image": "shopify:\/\/shop_images\/althete-img.png"
           }
         }
       },
@@ -403,7 +403,7 @@
       "settings": {
         "faq_heading": "Frequently Asked <span>Questions<\/span>",
         "faq_button_text": "get your peblz",
-        "faq_button_url": "",
+        "faq_button_url": "shopify:\/\/products\/the-pebble-xo",
         "team_heading": "Tips from <span>Experts<\/span>",
         "team_text": "Choose Peblz for a natural, effective, and sustainable approach to foot strengthening. Join the movement towards stronger, healthier feet today.",
         "padding_top": 100,

@@ -40,6 +40,26 @@ main .exercise-content .richtext-content ul li::before {
 .exercise-content ul li:not(:last-child) {
   margin-bottom: 1.2rem;
 }
+@media screen and (min-width: 1440px) {
+  .image-container-wrapper img {
+    border-radius: 12px;
+    width: 592px;
+    height: 479px;
+    max-width: 592px;
+  }
+  h4.uppercase.excercise-heading {
+    color: var(--Main-Colors-Black, #030303);
+    -webkit-text-stroke-width: 1;
+    -webkit-text-stroke-color: var(--Main-Colors-Black, #030303);
+    font-family: Aldrich;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px; /* 140% */
+    text-transform: uppercase;
+    margin-bottom: 24px;
+  }
+}
 @media screen and (max-width: 991px) {
   .exercise-item {
     width: 50%;
@@ -47,6 +67,57 @@ main .exercise-content .richtext-content ul li::before {
 
   h2.section-text-title {
     font-size: 32px;
+  }
+  .image-container-wrapper img {
+    height: 567px;
+  }
+  .right-foot-image img,
+  .left-foot-image img {
+    width: 370px !important;
+    object-fit: contain;
+    margin: auto;
+  }
+  .richtext-content.left-right-content,
+  .richtext-content.left-foot-content {
+    margin-bottom: 20px;
+  }
+
+  .slide-text h3 {
+    margin-bottom: 20px;
+  }
+  .step-guide-container .owl-carousel .slide-content {
+    gap: 0px;
+  }
+
+  .step-guide-container .owl-carousel .item .slide-text img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .richtext-content h4 {
+    margin-bottom: 20px;
+  }
+
+  .richtext-content.left-foot-content,
+  .slide-text h3,
+  .richtext-content.right-foot-content {
+    margin-bottom: 10px;
+  }
+
+  .custom-audio-player {
+    height: 50px;
+    padding-left: 6px;
+  }
+
+  .right-foot-image img,
+  .left-foot-image img {
+    width: 50%;
+    height: 190px;
+    object-fit: contain;
+  }
+
+  .step-guide-container .owl-nav {
+    transform: translate(50%);
   }
 }
 @media screen and (max-width: 767px) {
@@ -61,5 +132,26 @@ main .exercise-content .richtext-content ul li::before {
 
   .grid.exercise-items {
     flex-wrap: wrap;
+  }
+  .image-container-wrapper img {
+    height: auto;
+  }
+  .step-guide-container .owl-nav {
+    transform: translate(135%);
+  }
+  .excercise-heading {
+    min-height: auto;
+    margin-bottom: 15px;
+  }
+
+  .grid.exercise-items {
+    padding: 10px;
+  }
+  .step-guide-container .owl-nav {
+    transform: translate(65%);
+  }
+
+  .step-guide-container .slide-counter {
+    left: 40%;
   }
 }

@@ -12,7 +12,7 @@ $(document).ready(function(){
       autoplayTimeout: 5000,
       navText : ["<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/prev-arrow.svg' alt='previous-icon' width='24' height='24'>","<img src='https://cdn.shopify.com/s/files/1/0658/9733/2918/files/next-arrow.svg' alt='previous-icon' width='24' height='24'>"],
       autoplayHoverPause: true,
-      stagePadding: 200, // Show portion of previous and next slides
+      stagePadding: 187, // Show portion of previous and next slides
       onInitialized: updateCounter,  // Call counter update on initialization
       onChanged: updateCounter,      // Call counter update on slide change
       responsive:{
@@ -65,8 +65,9 @@ $(document).ready(function(){
     
     tips_expert.owlCarousel({
       loop:true,
-      margin:16,
+      margin:24,
       nav:true,
+        center:true,
       responsiveClass:true,
       center:true,
       navText: [
@@ -75,13 +76,20 @@ $(document).ready(function(){
       ],
       responsive:{
           0:{
-              items:1
+              items:1.4,
+            stagePadding: 0,
+             margin:15,
+              center:true
           },
           600:{
-              items:3
+              items:2.4,
+            stagePadding: 0,
+              center:true
           },
-          1000:{
-              items:3.5
+          1200:{
+              items:3.3,
+            center:true,
+             stagePadding: 0
           }
       },
       onInitialized: updateSliderCounter,  // Call counter update on initialization
@@ -112,4 +120,18 @@ $(document).ready(function(){
     // Move the owl dots into the custom dot-navigation container
     $('.tips-from-expert-slider .owl-dots').appendTo('.dot-navigation');
   });
-  
+$(document).ready(function(){
+if ($(window).width() < 991) {
+    $('h2.footer-block__heading.inline-richtext').click(function (e) {
+      $(this).parent().find('.footer-block__details-content').slideToggle();
+      $(this).parent().siblings().children().next().slideUp();
+      return false;
+    });
+    // $('h2.footer-block__heading.inline-richtext').click(function (e) {
+    //   $('.footer-block.grid__item.footer-block--menu').find('ul').slideUp();
+    //   $(this).parent().find('ul').slideDown();
+
+    //   return false;
+    // });
+  }
+    });

@@ -1,5 +1,5 @@
 {{ 'index-banner.css' |  asset_url | stylesheet_tag }}
-
+<script src="https://scripts.sirv.com/sirv.js" defer></script>
 <section class="color-{{ section.settings.color_scheme }} banner-wrapper">
     <div class="page-width">
         <div class="grid grid--2-col grid--1-col-tablet-down banner-content">
@@ -20,7 +20,9 @@
                
             </div>
             <div class="grid__item banner-image {% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}">
-                {% render 'image', image: section.settings.image, srcset: true, sizes: true, width: 428, height: 303, lazy_load: false %}
+                <div class="sirv-container">
+                  <div class="Sirv" data-src="https://devnerd1.sirv.com/Spins/Pebbles/PEBLZ_O/New/New.spin"> </div>
+                </div>
                 {% if section.settings.spin_text != blank %}
                     <p class="spin-text"> {% render 'icon-spin' %} {{ section.settings.spin_text }} </p>                    
                 {% endif %}
